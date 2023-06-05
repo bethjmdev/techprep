@@ -1,5 +1,7 @@
 # techprep
 
+Note: I may not be coding every day, but I am doing something everyday to push my developer skills forward. Currently I am focusing on my technical interview skills and building a website for a local business owner.
+
 June 2nd-
 Looked for resources for tech interviews. Found a website with leetcode to follow. Found a youtube video to teach me what data structures and algorithms are
 
