@@ -24,4 +24,6 @@ I leanred about....
 -recursion
 -merge sort
 
+this is the video i've been following: https://www.youtube.com/watch?v=CBYHwZcbD-s&t=181s
+
 moving on to start a few leetcode questions
