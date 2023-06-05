@@ -7,3 +7,21 @@ Looked for resources for tech interviews. Found a website with leetcode to follo
 
 June 5th-
 today I am focusing on learning what data structures and algorithms are.
+
+I leanred about....
+-stacks
+-queues
+-priority queues
+-linked lists
+-dynamic arrays
+-big o notion
+-linear search
+-binary search
+-interpolation search
+-bubble sort
+-selection sort
+-insersion sort
+-recursion
+-merge sort
+
+moving on to start a few leetcode questions
