@@ -1,8 +1,8 @@
 Today I am focusing on learning how to think about solving techincal interview questions
-I watched this youtube video: https://www.youtube.com/watch?v=3OamzN90kPg
 
-problem to solve: contains duplicate
-given an integer array nums, reutn true if any value appears at least twice in the array, and return false if every element is distinct
+////////////////////////////////////
+
+Q1.
 
 things I am understanding:
 
@@ -20,3 +20,21 @@ things I am struggling to understand:
    solution- don't worry about that right now, it will be a priority in the future
 
 Notes:
+
+////////////////////////////////////
+
+Q2.
+
+things I am understanding:
+
+1. using hash map to check if it's an anagram
+2.
+
+things I am struggling to understand: 0. .get and why it needds to be used in python
+
+1. syntax, that will be a theme for a while.
+2. time complexity and storage complexity
+
+note: when I hear this I can say "ah I understand how this makes sense. I dont know how to do it on my own"
+
+Good first step
