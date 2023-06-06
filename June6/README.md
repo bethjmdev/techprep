@@ -38,3 +38,5 @@ things I am struggling to understand: 0. .get and why it needds to be used in py
 note: when I hear this I can say "ah I understand how this makes sense. I dont know how to do it on my own"
 
 Good first step
+
+GO BACK TO THIS VIDEO TO 8:25
