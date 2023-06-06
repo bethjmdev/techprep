@@ -27,3 +27,6 @@ I leanred about....
 this is the video i've been following: https://www.youtube.com/watch?v=CBYHwZcbD-s&t=181s
 
 moving on to start a few leetcode questions
+
+June 6th-
+I am using neetcode for tech interview prep as of now. Today I am watching videos to understand how people think about solving these problems.
