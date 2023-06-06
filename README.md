@@ -1,32 +1,15 @@
-# techprep
+Practice and Prep for Software Engineering Interviews
 
-Note: I may not be coding every day, but I am doing something everyday to push my developer skills forward. Currently I am focusing on my technical interview skills and building a website for a local business owner.
+This file serves as a record of my journey in practicing and preparing for software engineering interviews. It contains information about the resources I used, the topics I studied, and my progress in honing my technical skills and interview techniques.
 
-June 2nd-
-Looked for resources for tech interviews. Found a website with leetcode to follow. Found a youtube video to teach me what data structures and algorithms are
+Progress-
+Tracking my progress is an essential aspect of my interview preparation. I maintain a log to monitor the number of problems solved, topics studied, and notable insights gained. By regularly reviewing this log, I can observe my growth and focus on areas that need further attention.
 
-June 5th-
-today I am focusing on learning what data structures and algorithms are.
+Resources-
+Books:
+Websites:
+Youtube videos:
+Courses:
 
-I leanred about....
--stacks
--queues
--priority queues
--linked lists
--dynamic arrays
--big o notion
--linear search
--binary search
--interpolation search
--bubble sort
--selection sort
--insersion sort
--recursion
--merge sort
-
-this is the video i've been following: https://www.youtube.com/watch?v=CBYHwZcbD-s&t=181s
-
-moving on to start a few leetcode questions
-
-June 6th-
-I am using neetcode for tech interview prep as of now. Today I am watching videos to understand how people think about solving these problems.
+Contributing-
+While this readme.md file primarily serves as a personal record, I welcome any suggestions, recommendations, or additional resources that can further enhance my interview preparation journey. Please feel free to contribute by opening an issue or submitting a pull request.
