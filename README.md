@@ -21,4 +21,4 @@ Courses:
 </br>
 Contributing-
 </br>
-While this readme.md file primarily serves as a personal record, I welcome any suggestions, recommendations, or additional resources that can further enhance my interview preparation journey. Please feel free to contribute by opening an issue or submitting a pull request.
+While this file primarily serves as a personal record, I welcome any suggestions, recommendations, or additional resources that can further enhance my interview preparation journey. Please feel free to contribute by opening an issue or submitting a pull request.

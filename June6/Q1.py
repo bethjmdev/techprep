@@ -1,6 +1,8 @@
 # problem to solve: contains duplicate
 # given an integer array nums, reutn true if any value appears at least twice in the array, and return false if every element is distinct
 
+# I watched this youtube video: 
+# https://www.youtube.com/watch?v=3OamzN90kPg
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
