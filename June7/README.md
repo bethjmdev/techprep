@@ -3,21 +3,25 @@ Today I am focusing on:
 
 <ul>
 <li>
-1. finishing up valid anagram 
-A. DONE
-</li>
-<li>
-2. better understanding time/space complexity
+finishing up valid anagram 
 <ul>
 <li>
-A. made flash cards based on bro code data structures and algorithms video
+DONE
 </li>
 </ul>
 </li>
 <li>
-3. completing a section of udemy course
+better understanding time/space complexity
+<ul>
+<li>
+made flash cards based on bro code data structures and algorithms video
+</li>
+</ul>
 </li>
 <li>
-4. attempting another neetcode question
+completing a section of udemy course
+</li>
+<li>
+attempting another neetcode question
 </li>
 </ul>
