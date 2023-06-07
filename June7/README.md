@@ -12,7 +12,7 @@ A. DONE
 <li>
 A. made flash cards based on bro code data structures and algorithms video
 </li>
-<ul>
+</ul>
 </li>
 <li>
 3. completing a section of udemy course
