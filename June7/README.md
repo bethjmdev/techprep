@@ -44,3 +44,35 @@ completing a section of udemy course
 attempting another neetcode question
 </li>
 </ul>
+
+//////
+behavioral interview questions I want to reference back to:
+
+tell me about yourself:
+https://www.youtube.com/shorts/9g218dwjMFo
+
+walk me through your resume:
+https://www.youtube.com/shorts/Rl3zL0D3AVE
+
+why did you leave your last job:
+https://www.youtube.com/shorts/zEwpJk-EqKo
+
+salary expectations:
+https://www.youtube.com/shorts/Pn5cxUM4Tag
+
+do you have any questions for us:
+https://www.youtube.com/shorts/WUHDEL8jU_c
+
+what is your greatest strength:
+https://www.youtube.com/shorts/5N-ztfNkTV4
+
+/////////////////////
+culture questions:
+
+1. how often and in what way is feedback given at theis company?
+
+/////////////////////
+other tips:
+
+1. research company
+2. research position
