@@ -1,11 +1,11 @@
 <h1>Practice and Prep for Software Engineering Interviews</h1>
 
-This file serves as a record of my journey in practicing and preparing for software engineering interviews. It contains information about the resources I used, the topics I studied, and my progress in honing my technical skills and interview techniques.
+This file serves as a record of my journey in practicing and preparing for software engineering interviews. It contains information about the resources I've used, the topics I've studied, and my progress in honing my technical skills and interview techniques.
 </br>
 </br>
 Progress-
 </br>
-Tracking my progress is an essential aspect of my interview preparation. I maintain a log to monitor the number of problems solved, topics studied, and notable insights gained. By regularly reviewing this log, I can observe my growth and focus on areas that need further attention.
+Tracking my progress is an essential aspect of my interview preparation. I am maintaining a log to monitor the number of problems solved, topics studied, and notable insights gained. By regularly reviewing this log, I can observe my growth and focus on areas that need further attention.
 </br>
 </br>
 Resources-(to be updated)
