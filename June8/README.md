@@ -9,3 +9,8 @@ Intentions of day:
 4. apply for 2 jobs on company websites and write cover letter
 
 5. watch behavioral interview videos when attention wanes
+
+///////////////
+task tracking:
+
+met with Youseff to refelect on interview question responses
