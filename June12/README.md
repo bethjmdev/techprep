@@ -1,11 +1,12 @@
 today.....
 
-practice 3 neetcode questions
+-practice 3 neetcode questions
 DONE
 
-3 small segments of udemy
+-3 small segments of udemy
+DONE
 
-brainstorm new full stack project to work on:
+-brainstorm new full stack project to work on:
 Workout builder?
 
 Like neetcode….
@@ -20,4 +21,4 @@ They can click that section and view the workout they built
 
 Maybe let them choose a “layout” for posture, balance, etc
 
-apply to 2 jobs
+-apply to 2 jobs
