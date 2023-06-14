@@ -8,3 +8,5 @@ project.....
 react route completed
 
 I decided I would make it a front end only app
+
+get request set up
