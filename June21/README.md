@@ -1,0 +1,3 @@
+today...
+
+I got the workout app to a point where I can stop for now, putting that project on the back burner until I finish steohs website
