@@ -1,4 +1,4 @@
 to do...
 interview prep with youssef and brian
 
-read ctci
+read ctci and update notes
