@@ -1,4 +1,4 @@
-// not my code, asked chat gpt to explain the two sum solution to me so I can better understand how to code leetcode q's
+// not my code, asked chat gpt to explain the solution to me so I can better understand how to code leetcode q's
 
 // ```javascript
 // var isAnagram = (s, t) => {
