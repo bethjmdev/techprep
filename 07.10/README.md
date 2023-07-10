@@ -1,0 +1,3 @@
+to do today...
+-work on steph's website
+-read ctci
