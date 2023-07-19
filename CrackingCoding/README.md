@@ -4,7 +4,7 @@ start with an interesting and clickbatey nugget when starting a story
 
 <h1> Big O </h1>
 
-<h3> Anaology for run time </h3>
+<h2> Anaology for run time </h2>
 * Imagine that you have a file that you need to get to someone who lives across the country
 
 You could email it or send it via postal service on a usb
@@ -13,7 +13,7 @@ depending on the size of the file one option may be more time and/or cost effiei
 
 you have to decide based on the size of the file what the most appropriate delivery route would be
 
-<h3>Time compexity </h3>
+<h2>Time compexity </h2>
 
 - Electronic transfer would be 0(s) with s being the size of the file. This means that the time to transfer the file increase with the size of the file
 
@@ -23,7 +23,7 @@ Airplane transfer would be 0(1) with repsect to the size of the file. As the siz
 
 - You can have multiple variables in your runtime. Example: painting a fence would be w (width) meters wide and h (height) meters high. which would be described as 0(wh). if you needed p layers on paint you could say it was 0(whp)
 
-<h3>Space complexity</h3>
+<h2>Space complexity</h2>
 - Space complexity is the amount of memory that an algorithm takes up
 
 - If we need to create an array of size n, this will require 0(n) space. if we need a two dimensional array of size n by n, this will require 0(n^2) space
@@ -62,7 +62,7 @@ Airplane transfer would be 0(1) with repsect to the size of the file. As the siz
 
 -Hash Tables are extremly important
 
-<h3>Notes for solving a technical question </h3>
+<h2>Notes for solving a technical question </h2>
 <h4>First </h4> 
 -find the brute force way of solving the question, you can revise from there
 <h4>When optimizing</h4> 
@@ -74,14 +74,14 @@ Airplane transfer would be 0(1) with repsect to the size of the file. As the siz
 -Walk through your appraoch in detail
 <h4>When implimineting final version of code</h4> -modularize it and make it look pretty
 
-<h3>Other tips for solving</h3>
+<h4>Other tips for solving</h4>
 -Listen for guidance from the interviewer. THey make take a more or less active role in your problem solving.
 
 -Try drawing a literal example of the solution
 
 - when you get a question try to come up with a real life example of it to solve. like... if you were to hand someone a stack of papers and ask them to find their last name. think about how they might do that
 
-<h3>When testing </h4>
+<h4>When testing </h4>
 -Start with a conceptual test. THis means reading and analyzing each line of code. Think about it like yu're explaining lines of code to a reviewer- does the code do what you think it should do?
 
 -Use small test cases like a 3 or 4 element array, it'll liekly discover the same bugs but will be much faster to do
@@ -98,15 +98,15 @@ D- duplicate work
 
 <h1>Interview Questions</h1>
 
-<h3>Hash Tables</h3>
+<h2>Hash Tables</h2>
 -A hastable is a data structure that maps keys to values for highly efficient look up
 Note to self: Look up more about coding hashmaps in JavaScript
 
-<h3>ArrayList and Resizable Arrays</h3>
+<h2>ArrayList and Resizable Arrays</h2>
 -When you need an array-like data sctructure that offers dynamic resizing you would usually use an ArrayList.
 -And ArrayList is and array that resizes itself as needed while still rpoviding 0(1) access. A typical implimentation is that when the array is full, it doubles in size (can be different resize size based on the language)
 
-<h3>LinkedList </h3>
+<h2>LinkedList </h2>
 -A linked List is a data stucture  that represents a seqences of nodes.
 -In a *singley linked list* each node points to the next node in the linked list.
 -In a *doubley linked list* each node points to the next and previous nodes
@@ -126,7 +126,7 @@ Note to self: Look up how to code a linked list in JavaScript
 
 -The "fast" node might be ahead by a fixed amount, or it might be hopping multiple nodes for each one node that the "slow" node iterates through
 
-<h5>Example</h5>
+<h5>Example:</h5>
 You have linked list....
 a^1 -> a^2 -> ... ->a^n -> b^1 -> b^2 -> ... -> b^n
 
@@ -140,5 +140,37 @@ a^1 -> b^1 ->a^2 -> b^2 -> ... a^n -> b^n
 
 -on each iteration p2 slects an element and inserts it after p1
 
-<h3> Recusive Problems </h3>
+<h2> Recusive Problems </h2>
 -A nubmer of linked list rpblems rely on recursion. remember that recursive algorithms take 0(n) space where n is the depth of the recursive call
+
+<h1>Stacks and Queues </h1>
+
+<h3>Implimenting a stack</h3>
+-stacks use LIFO ordering
+
+<h5>It uses the following operations</h5>
+<ul>
+<li>pop(): remove the top item fromt he stack </li>
+<li>push(item): add an item to the top of the stack </li>
+<li>peek(): return the top of the stack</li>
+<li>isEmpty(): return true if and only fi the stack is empty </li>
+</ul>
+
+-unlike an array, a stack does not allow constant time adds and removes, as it doesnt require shifitng elements around
+
+<h2>Where helpful</h2>
+-useful in certain recursive algorithms. sometiems you need to push temporary data onto a stack as you recurse, but them remove them as you backtrack. A stack offers an intuative way to do this.
+
+<h3>Implimenting a queue </h3>
+-A queue is FIFO ordering
+
+<h5>It uses the following operations</h5>
+<ul>
+<li>add(item): Add an irem to the end of the queue </li>
+<li>remove(): remove the first item in the queue </li>
+<li>peek(): return the top of the queue </li>
+<li>isEmpty(): return true if and only if the queue is empty </li>
+</ul>
+
+-A queue can be implimented with a linked list
+-One place where queues are often used is breadth-first search or in implimenting a cache
