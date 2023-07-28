@@ -123,3 +123,9 @@ Math.cos();
 Math.random();
 // It provides a random number between 0 and 1. It can be written as:
 // Math.random();
+
+Math.sign();
+// Returns the sign of the x, indicating whether x is positive, negative, or zero.
+
+Math.trunc();
+// Returns the integer portion of x, removing any fractional digits.
