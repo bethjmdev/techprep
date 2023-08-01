@@ -15,5 +15,5 @@ Thursday-
 Find apllications
 JS practice
 
-F-
+Friday-
 Codewars
