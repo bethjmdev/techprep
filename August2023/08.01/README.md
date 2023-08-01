@@ -1,3 +1,3 @@
 to do...
 meeting with dave
-2 js sections
+find places to apply to
