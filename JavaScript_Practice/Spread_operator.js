@@ -1,6 +1,8 @@
 // spread operator =
 // allows an iterable thing like an array or string to be expanded in places where zero or more agruments are expects (unpacks the elements)
 // spreads it into individual arguments
+//like opening up a box and taking out whats inside
+
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let maximum = Math.max(numbers);
 console.log(maximum);
