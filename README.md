@@ -3,14 +3,14 @@
     <h1>Software Engineering Interview Prep Repository</h1>
     <p>Welcome to my GitHub repository dedicated to my journey of preparing for software engineering interviews. Here I track what I am ding on a day to day and month to month basis.</p>
 
-<p>list below is what you will find in the various folders </p>
+<p>Listed below is what you will find within the various folders... </p>
   </div>
 
   <div>
     <div>
       <h2>Code Wars Responses</h2>
       <p>
-        In this section, you'll find my solutions to various coding challenges from Code Wars, a platform renowned for its algorithmic and coding puzzles. I approach each challenge with dedication, aiming not only to solve the problem but also to craft efficient, readable, and maintainable code. I provide detailed explanations of my thought process and the strategies I employ to arrive at these solutions.
+        You'll find my solutions to various coding challenges from Code Wars, a platform renowned for its algorithmic and coding puzzles. I approach each challenge with dedication, aiming not only to solve the problem but also to craft efficient, readable, and maintainable code. I provide detailed explanations of my thought process and the strategies I employ to arrive at these solutions.
       </p>
     </div>
 <div>
@@ -30,5 +30,5 @@
   </div>
 
   <div>
-    <p>Thank you for visiting my repository. I invite you to explore the wealth of knowledge and insights I've compiled here. If you have any questions, suggestions, or opportunities, please feel free to connect with me on social media or via email: [Your Email Address]. Together, let's embark on this transformative journey towards becoming proficient software engineers.</p>
+    <p>Thank you for visiting my repository. I invite you to explore the wealth of knowledge and insights I've compiled here. If you have any questions, suggestions, or opportunities, please feel free to connect with me on social media or via email: bethjmdev@gmail.com. Together, let's embark on this transformative journey towards becoming proficient software engineers.</p>
   </div>
