@@ -1,7 +1,9 @@
 <body>
   <div>
     <h1>Software Engineering Interview Prep Repository</h1>
-    <p>Welcome to my GitHub repository dedicated to my journey of preparing for software engineering interviews.</p>
+    <p>Welcome to my GitHub repository dedicated to my journey of preparing for software engineering interviews. Here I track what I am ding on a day to day and month to month basis.</p>
+
+<p>list below is what you will find in the various folders </p>
   </div>
 
   <div>
