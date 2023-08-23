@@ -1,21 +1,22 @@
-function josephus() {
-  let k = 5;
-  let items = [2, 3, 4, 5, 6, 7, 8, 9, 1];
+var merge = function () {
+  //this should get rid of the 0's
+  let nums1 = [1, 2, 3, 0, 0, 0];
+  let nums2 = [7, 4, 5, 6];
 
-  let pigPen = [];
-
-  while (items.length > 0) {
-    for (let i = 1; i < items.length; i + k) {
-      pigPen.push(items[i]);
-      items.splice(i, 1);
-
-      i += 1;
+  for (let i = 0; i < nums1.length; i++) {
+    if (nums1[i] == 0) {
+      nums1.splice(i, 1);
+      i -= 1;
     }
   }
-  return pigPen;
-}
+  nums1 = nums1.concat(nums2);
+  console.log(nums1);
 
-josephus();
+  nums1.sort((x, y) => {
+    return y - x;
+  });
 
-///missing when there is a double zero
-//need to do something to adjust the positioning of i after the thing is spiced
+  console.log(nums1);
+};
+
+merge();
