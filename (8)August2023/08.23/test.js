@@ -1,22 +1,67 @@
-var merge = function () {
-  //this should get rid of the 0's
-  let nums1 = [1, 2, 3, 0, 0, 0];
-  let nums2 = [7, 4, 5, 6];
+var isAnagram = function () {
+  let s = "aacc";
+  let t = "ccac";
 
-  for (let i = 0; i < nums1.length; i++) {
-    if (nums1[i] == 0) {
-      nums1.splice(i, 1);
-      i -= 1;
+  let inputLength = 0;
+
+  s = s.split("");
+  t = t.split("");
+
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  for (let i = 0; i < s.length; i++) {
+    for (let j = 0; j < t.length; j++) {
+      if (t[j] === s[i]) {
+        inputLength += 1;
+        console.log("S is", s[j], "position", j, "I is", t[i], "position", i);
+        console.log("input length is", inputLength);
+        break;
+
+        //add something that says when they find the first matching letter, move on
+      }
     }
   }
-  nums1 = nums1.concat(nums2);
-  console.log(nums1);
 
-  nums1.sort((x, y) => {
-    return y - x;
-  });
+  if (inputLength == s.length) {
+    return true;
+  }
 
-  console.log(nums1);
+  return false;
 };
 
-merge();
+isAnagram();
+
+/////////----------
+
+var isAnagram = function () {
+  let s = "aacc";
+  let t = "cacc";
+
+  s = s.split("");
+  t = t.split("");
+
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  s.sort();
+  console.log("sorted", s);
+
+  t.sort();
+  console.log("sorted", t);
+
+  for (let i = 0; i < s.length; i++) {
+    for (let j = 0; j < t.length; j++) {
+      if (s === t) {
+        console.log("in the for statement", s, t);
+        return true;
+      }
+    }
+  }
+
+  return false;
+};
+
+isAnagram();
