@@ -16,7 +16,9 @@ var missingNumber = function () {
   let minHold = [];
   let outPut;
 
-  nums = nums.sort();
+  nums = nums.sort((x, y) => {
+    return x - y;
+  });
 
   if (nums[0] !== 0) {
     return 0;
@@ -29,6 +31,8 @@ var missingNumber = function () {
   console.log("count array is", countArray);
 
   for (let i = 0; i < countArray.length; i++) {
+    console.log("this is nums[i]", nums[i]);
+
     if (countArray[i] !== nums[i]) {
       minHold.push(countArray[i], nums[i]);
       break;
