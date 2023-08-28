@@ -1,33 +1,36 @@
 var plusOne = function () {
-  // let digits = [1,2,3];
-  // let digits = [4,3,2,1];
-  // let digits = [9];
-  // let digits = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]
-  //   let digits = [8, 2, 0, 4, 5, 3, 6, 5, 1, 2, 2, 1, 2, 0, 0, 3, 6, 5, 7, 1, 9];
-  let digits = [
-    7, 2, 8, 5, 0, 9, 1, 2, 9, 5, 3, 6, 6, 7, 3, 2, 8, 4, 3, 7, 9, 5, 7, 7, 4,
-    7, 4, 9, 4, 7, 0, 1, 1, 1, 7, 4, 0, 0, 7,
-  ];
+
+  let digits = [9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]
 
   let shorterDigits = [];
+  let nineCounter = 0;
+
+  for (let i = 0; i < digits.length; i++){
+    if(digits[i] === 9){
+        nineCounter += 1
+    }
+  }
+
+  if (nineCounter == digits.length){
+    digits.fill(0)
+    digits.unshift(1)
+    return digits
+  }
 
   if (digits.length > 14) {
     shorterDigits.push(digits.splice(digits.length - 9, 10));
-    console.log("puuush", shorterDigits[0]);
 
     for (let i = 0; i < shorterDigits.length; i++) {
-      if (shorterDigits[0][0] == 0) {
-        digits.push(0);
+      if (shorterDigits[0][0] == 0 && shorterDigits[0][1] == 0 && shorterDigits[0][2] == 0){
+        digits.push(0, 0, 0);
       } else if (shorterDigits[0][0] == 0 && shorterDigits[0][1] == 0) {
-        console.log("added 2 zeros");
         digits.push(0, 0);
       } else if (
-        shorterDigits[0][0] == 0 &&
-        shorterDigits[0][1] == 0 &&
-        shorterDigits[0][2]
+        shorterDigits[0][0] == 0 
       ) {
-        digits.push(0, 0, 0);
+        digits.push(0);
       }
+      console.log("these are digits",digits)
     }
 
     shorterDigits = shorterDigits[0].join("");
@@ -53,5 +56,3 @@ var plusOne = function () {
 };
 
 plusOne();
-
-// && shorterDigits[i] < shorterDigits[i + 1]
