@@ -1,0 +1,3 @@
+to do list today.....
+Look over iOS course and see if it fits into what I'm doing
+Plan out how I want to go about applying to jobs/networking/working on projects/doing a course
