@@ -28,7 +28,6 @@ function expandedForm(num) {
   }
 
   return output.join(" + ");
-  //   console.log("hi");
 }
 
 // Test cases
