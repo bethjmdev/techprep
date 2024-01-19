@@ -12,7 +12,7 @@
 //             if (isTarget)  // If the current num is equal to the complement, it means we found a pair that adds up to the target sum.
 //                 return [curr, next];  // Return an array containing the indices of the two numbers.
 //         }
-//     }
+//     } 
 
 //     return [-1, -1];  // If no solution is found, return [-1, -1] to indicate that.
 // }
