@@ -8,8 +8,8 @@ class Solution {
         
 let letterMap = {};
 
-let s = s.split('');
-let t = t.split('');
+s = s.split('');
+t = t.split('');
 
 //need t cycle through t and out it in the hashmap
 //cycle through s and put it in hashmap
