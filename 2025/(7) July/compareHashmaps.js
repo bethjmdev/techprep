@@ -16,5 +16,23 @@
 
 
 
+let areHasmapsEqual = (map1, map2) => {
+
+    // get he keys in the object to be able to compare them
+      let keys1 = Object.keys(map1);
+      let keys2 = Object.keys(map2);
+    
+    if (keys1.length !== keys2.length) {
+      return false;
+    }
+    
+    for (let key of keys1) {
+      if (map2[key] === undefined || map1[key] !== map2[key]) {
+      return false
+      }
+    }
+    
+    
+    }
 
 
