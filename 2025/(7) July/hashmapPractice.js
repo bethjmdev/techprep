@@ -339,7 +339,244 @@ animals = {
 
   // ---------------------------------
 
-  
+
 
   
   
+  // ---------------------------------
+
+  let fruitCount = {}
+
+
+for (let i = 0; i < fruitList.length; i++) {
+
+let fruit = fruitList[i];
+  
+  if (fruitCount[fruit] === undefined) {
+  fruitCount[fruit] = 1
+  } else {
+  fruitCount[fruit] +=1
+  }
+
+}
+
+
+// ---------------------------------
+let veggieCount = {};
+
+for (let i = 0; i < veggieList.length; i++){
+  let veg = veggieList[i];
+
+  if (veggieCount[veg] === undefined) {
+  veggieCount[veg] = 1;
+  } else {
+veggieCount[veg] += 1;
+  }
+}
+
+
+// ---------------------------------
+
+
+for (let i = 0; i < animalList.length; i++) {
+    let animal = animalList[i];
+  
+    if (animal.length > 4 && animalCount[animal] == undefined) {
+    animalCount[animal] = 1;
+  
+    } else if (animal.length > 4) {
+    animalCount[animal] += 1;
+    }
+  
+  }
+
+  // ---------------------------------
+
+  let bookList = [
+    { title: "The Hobbit", author: "Tolkien" },
+    { title: "1984", author: "Orwell" },
+    { title: "Fahrenheit 451", author: "Bradbury" },
+    { title: "Dune", author: "Herbert" },
+    { title: "The Catcher in the Rye", author: "Salinger" },
+    { title: "Moby Dick", author: "Melville" }
+  ];
+  
+  
+  const authorCount = {};
+  
+  
+  for (let i= 0; i < bookList.length; i++){
+    let book = bookList[i];
+  
+    if (book.title.length > 7 && book.author.includes('a') && authorCount[book.author] === undefined){
+  
+    authorCount[book] = 1;
+  
+    } else if (book.title.length > 7 && book.author.includes('a') ) {
+  
+    authorCount[book.author] += 1;
+  
+    }
+  }
+
+  // ---------------------------------
+
+  const movieList = [
+    { title: "Inception", director: "Christopher Nolan", rating: 8.8 },
+    { title: "Memento", director: "Christopher Nolan", rating: 8.4 },
+    { title: "Tenet", director: "Christopher Nolan", rating: 7.3 },
+    { title: "Dunkirk", director: "Christopher Nolan", rating: 7.0 },
+    { title: "Titanic", director: "James Cameron", rating: 7.8 },
+    { title: "Avatar", director: "James Cameron", rating: 7.9 },
+    { title: "Aliens", director: "James Cameron", rating: 8.3 },
+    { title: "Pulp Fiction", director: "Quentin Tarantino", rating: 8.9 },
+    { title: "Reservoir Dogs", director: "Quentin Tarantino", rating: 8.3 },
+    { title: "Jackie Brown", director: "Quentin Tarantino", rating: 7.5 },
+    { title: "The Room", director: "Tommy Wiseau", rating: 3.7 }
+  ];
+  
+  
+  
+  let directorCount = {}
+  
+  for (let movie of movieList) {
+    if (movie.rating > 7 && directorCount[movie.director] == undefined) {
+    directorCount[movie.director] = 1 
+    } else if (movie.rating > 7 && directorCount[movie.director] != undefined){
+    directorCount[movie.director] += 1
+    }
+  }
+  
+
+  // ---------------------------------
+  const productList = [
+    { name: "Headphones", category: "electronics", price: 15 },
+    { name: "Laptop", category: "electronics", price: 1200 },
+    { name: "Book: JavaScript Basics", category: "books", price: 12 },
+    { name: "Book: Advanced CSS", category: "books", price: 25 },
+    { name: "T-shirt", category: "clothing", price: 18 },
+    { name: "Jeans", category: "clothing", price: 40 },
+    { name: "Smartphone", category: "electronics", price: 800 },
+    { name: "Notebook", category: "books", price: 5 },
+    { name: "Pen", category: "books", price: 2 }
+  ];
+  
+  
+  
+  let overTwenty = {};
+  
+  for (let product of productList) {
+    if (product.price < 20 && overTwenty[product.category] == undefined) {
+    overTwenty[product.category] = 1;
+    } else if (product.price < 20 && overTwenty[product.category] !== undefined) {
+    overTwenty[product.category] += 1;
+    }
+  }
+
+  // ---------------------------------
+
+  const employeeList = [
+    { name: "Alice", department: "Engineering", salary: 75000 },
+    { name: "Bob", department: "Engineering", salary: 48000 },
+    { name: "Charlie", department: "HR", salary: 52000 },
+    { name: "Diana", department: "Marketing", salary: 47000 },
+    { name: "Ethan", department: "Marketing", salary: 65000 },
+    { name: "Fiona", department: "HR", salary: 49000 },
+    { name: "George", department: "Engineering", salary: 55000 }
+  ];
+  
+  let highEarners = {}
+  
+  
+  for (let employee of employeeList) {
+    if (employee.salary > 50000 && highEarners[employee.department] === undefined)  {
+    highEarners[employee.department] = 1
+    } else if (employee.salary > 50000 && highEarners[employee.department] !== undefined) {
+    highEarners[employee.department] += 1
+    }
+  }
+
+
+
+  // ---------------------------------
+
+  const fruitList = [
+    { name: "Apple", color: "red" },
+    { name: "Strawberry", color: "red" },
+    { name: "Banana", color: "yellow" },
+    { name: "Lemon", color: "yellow" },
+    { name: "Grape", color: "purple" },
+    { name: "Blueberry", color: "blue" }
+  ];
+  
+  
+  //how many fruits of each color
+  
+  let colors = {};
+  
+  
+  for(let fruit of fruitList) {
+    if (colors[fruit.color] === undefined) {
+    colors[fruit.color] = 1;
+    } else {
+    colors[fruit.color] += 1;
+    }
+  }
+
+  // ---------------------------------
+  
+  const petList = [
+    { name: "Buddy", type: "dog" },
+    { name: "Mittens", type: "cat" },
+    { name: "Rex", type: "dog" },
+    { name: "Whiskers", type: "cat" },
+    { name: "Hopper", type: "rabbit" },
+    { name: "Fluffy", type: "rabbit" },
+    { name: "Spot", type: "dog" }
+  ];
+  
+  
+  let animalz = {};
+  
+  
+  for (let pet of petList) {
+    if (animalz[pet.type] === undefined){
+    animalz[pet.type] = 1;
+    } else {
+    animalz[pet.type] += 1;
+    }
+  }
+  
+
+  // ---------------------------------
+  const numbers = [
+    { value: 4, category: "A" },
+    { value: 3, category: "A" },
+    { value: 2, category: "B" },
+    { value: 8, category: "B" },
+    { value: 7, category: "A" }
+  ];
+  
+  
+  let evenNums = {};
+  
+  for (let number of numbers) {
+    if (number.value % 2 === 0 && evenNums[number.category] == undefined){
+    evenNums[number.category] = 1;
+    }  else if (number.value % 2 === 0 && evenNums[number.category] !== undefined) {
+    evenNums[number.category] += 1;
+    }
+  }
+
+  // ---------------------------------
+
+  
+  
+
+
+
+
+
+
+
+
