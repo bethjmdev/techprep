@@ -259,3 +259,62 @@ for (let spot in parking) {
 }
 
 // --------------------------------
+
+// 12. Pet Feeding Schedule
+// Make a hashmap of pets and whether they have been fed: "dog": true, "cat": false, "hamster": true.
+
+
+// Loop over all pets. Print "fed" or "needs feeding" next to each pet’s name.
+
+
+
+const pets = {
+  'dog': true,
+  'cat': false,
+  'hamster': true
+}
+
+
+for (let fed in pets) {
+  if (pets[fed] === true) {
+  console.log( fed + " fed")
+  } else {
+  console.log(fed + " needs feeding")
+  }
+}
+
+// --------------------------------
+
+// 18. Library Books with Due Dates
+// Make a hashmap of books and whether they are checked out: "1984": true, "dune": false, "hobbit": true.
+
+// Also make a second hashmap of due dates: "1984": 3, "dune": 0, "hobbit": 1 (days until due).
+
+// Loop over all books. If a book is checked out, print "checked out, due in X days". If not, print "available".
+
+
+
+const libraree = {
+  "1984": true,
+  "dune": false,
+  "hobbit": true
+}
+
+const due = {
+   "1984": 3,
+  "dune": 0,
+  "hobbit": 1
+}
+
+
+
+for (let book in libraree) {
+  if (libraree[book] === true) {
+
+  console.log("checked out, due in " + due[book] + " days")
+  } else {
+  console.log("available")
+  }
+}
+
+// --------------------------------
