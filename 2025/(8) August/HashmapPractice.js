@@ -318,3 +318,93 @@ for (let book in libraree) {
 }
 
 // --------------------------------
+ 
+
+// 19. Gym Equipment with Maintenance
+
+// Make a hashmap of gym machines and whether they are in use: "treadmill": false, "bench": true, "elliptical": false.
+
+
+// Also make a second hashmap for maintenance: "treadmill": false, "bench": true, "elliptical": false.
+
+
+// Loop over all machines. Print:
+
+// "in use, needs maintenance" if in use and maintenance is true
+
+// "in use" if only in use
+
+// "free" if neither
+
+
+const gyms = {
+  "treadmill": false,
+  "bench": true,
+  "elliptical": false
+}
+
+const maintenance = {
+    "treadmill": false,
+  "bench": true,
+  "elliptical": false
+}
+
+
+for (let equipment in gyms) {
+  if (gyms[equipment] === true) {
+
+
+  if (mainenance[equipment] === true) {
+  console.log("in use, needs maintenance" )
+  } else {
+  console.log("neither")
+  }
+  } else {
+  console.log("free")
+  }
+}
+
+
+// --------------------------------
+
+
+// 20. Light Switches with Alerts
+
+// Make a hashmap of rooms and whether lights are on: "kitchen": true, "bedroom": false, "bathroom": true.
+
+// Also make a second hashmap of alerts: "kitchen": false, "bedroom": true, "bathroom": false.
+
+// Loop over all rooms. Print: "lights on, alert" if light is on and alert is true, 
+
+// otherwise print "lights on" or "lights off" as appropriate.
+
+
+const theHouse = {
+
+  kitchen : true,
+  bedroom : false,
+  bathroom : true
+}
+
+const alerts = {
+    kitchen : false,
+  bedroom : true,
+  bathroom : false
+}
+
+for (let room in theHouse) {
+  if (theHouse[room] === true ){
+
+  if (alerts[room] === true) {
+  console.log("lights on, alert")
+  } else {
+  console.log("lights on")
+  }
+  } else if (theHouse[room] === false ){
+  console.log("lights off")
+  }
+}
+
+
+
+
