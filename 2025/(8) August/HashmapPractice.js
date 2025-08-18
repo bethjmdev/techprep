@@ -82,3 +82,106 @@ if (users["maria"] === false) {
 } else {
   console.log("welcome back")
 }
+
+// --------------------------------
+
+
+// 5. Toy Store
+// Make a hashmap with toy counts: "lego": 5, "doll": 0, "car": 2.
+
+
+// Check if "doll" is available. If not, print "restock dolls". If yes, print how many.
+
+
+const toys = {
+  "lego": 5,
+  "doll": 0,
+  "car": 2
+}
+
+
+if (toys["doll"] > 0) { 
+console.log(toys["doll"]);
+} else {
+  console.log("restock dolls")
+}
+
+// --------------------------------
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections
+
+
+// 6. Movie Tickets
+// Make a hashmap of movies and available tickets: "inception": 10, "frozen": 0, "avatar": 5.
+
+
+// Check if "frozen" has tickets available. If yes, print how many tickets are left. If no, print "sold out".
+
+
+const movies = {
+  "inception" : 10,
+  "frozen" : 0,
+  "avatar" : 5
+}
+
+
+if (movies["frozen"] === 0) {
+  console.log("sold out")
+} else {
+  console.log(movies["frozen"])
+}
+
+// --------------------------------
+
+
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections
+
+
+// 7. Classroom Attendance
+// Make a hashmap of students and whether they are present: "lisa": true, "mark": false, "tina": true.
+
+// Loop over all students. For each student, print "present" or "absent" next to their name.
+
+
+const attendance = {
+  "lisa" : true,
+  "mark": false,
+  "tina" : true
+}
+
+for (let student in attendance) {
+  if (attendance[student] === true) {
+  console.log(student + " present")
+  } else if  (attendance[student] === false) {
+  console.log(student + " absent")
+  }
+}
+
+// --------------------------------
+
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections
+
+// 8. Library Books
+// Make a hashmap of books and whether they are checked out: "1984": true, "dune": false, "hobbit": true.
+
+// Loop over all books. For each book, print "checked out" if true, otherwise "available".
+
+
+const library = {
+  '1984' : true,
+  "dune" : false,
+  "hobbit": true
+}
+
+for (let book in library) {
+  if (library[book] === true) {
+  console.log(book + " checked out")
+  } else {
+  console.log(book + " available")
+  }
+}
+
+
+// --------------------------------
