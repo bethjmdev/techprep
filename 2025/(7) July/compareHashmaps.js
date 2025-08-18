@@ -186,3 +186,77 @@ for (let key of group1) {
 
 
 }
+
+// ---------------------------------
+
+let hours1 = {
+  "Alice": 40,
+  "Bob": 35,
+  "Charlie": 30
+};
+
+let hours2 = {
+  "Charlie": 30,
+  "Bob": 35,
+  "Alice": 40
+};
+
+
+let areSame = () => {
+  let key1 = Object.keys(hours1);
+let key2 = Object.keys(hours2);
+
+if (key1.length != key2.length) {
+  return false;
+}
+
+//compare keys
+for (let key of key1) {
+  
+  if (hours2[key] === undefined || hours2[key] !== hours1[key]) {
+  return false
+  }
+}
+
+
+
+return true
+}
+
+
+// ---------------------------------
+
+
+let salesA = {
+  "Notebooks": 12,
+  "Pens": 30,
+  "Erasers": 8,
+  "Markers": 15
+};
+
+let salesB = {
+  "Erasers": 8,
+  "Markers": 15,
+  "Notebooks": 12,
+  "Pens": 30
+};
+
+
+
+let isSame = () => {
+  
+  let key1 = Object.keys(salesA);
+  let key2 = Object.keys(salesB);
+
+  if (key1.length !== key2.length) {
+  return false
+  }
+
+  for (let key of salesA) {
+  if (salesB[key] === undefined || salesA[key] !== salesB[key]) {
+  return false
+  }
+  }
+
+  return true
+}

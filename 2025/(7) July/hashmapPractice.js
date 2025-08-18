@@ -580,3 +580,135 @@ for (let i = 0; i < animalList.length; i++) {
 
 
 
+
+  // ---------------------------------
+
+
+
+let classroom1 = {
+  "Alice": 17,
+  "Bob": 20,
+  "Charlie": 22,
+  "Diana": 16
+};
+
+let classroom2 = {
+  "Eve": 18,
+  "Frank": 21,
+  "Grace": 15,
+  "Hank": 17
+};
+
+let classroom3 = {
+  "Ivy": 19,
+  "Jack": 20,
+  "Kara": 16,
+  "Leo": 18
+};
+
+
+
+//make hashmaps of everyones ages
+//then compares the hashmaps to see if the match
+
+
+let adults = () => {
+
+let class1 = { 
+adult: 0,
+child: 0
+};
+
+let class2 = { 
+adult: 0,
+child: 0
+};
+
+let class3 = { 
+adult: 0,
+child: 0
+};
+  
+
+for (let name in classroom1) {
+let age = classroom1[name]
+
+if (age >= 18) {
+  class1["adult"] += 1;
+} else {
+  class1["child"] += 1;
+}
+
+}
+
+for (let name in classroom2) {
+  let age = classroom2[name]
+
+  if (age >= 18) {
+  class2["adult"] += 1;
+  } else {
+  class2["child"] += 1;
+  }
+}
+
+
+for (let name in classroom3) {
+  let age = classroom3[name]
+
+  if (age >= 18){
+  class3["adult"] += 1;
+  } else {
+  class3['child'] += 1;
+  }
+}
+
+//dont need to compare length
+
+for (let key in class1) {
+  if (class2[key] === undefined || class1[key] !== class2[key]) {
+  return false;
+  } else if (class3[key] === undefined || class1[key] !== class3[key]) {
+  return false
+  }
+}
+
+
+  return true
+}
+
+// ---------------------------------
+
+let city1 = {
+  "2025-07-01": 58,
+  "2025-07-02": 62,
+  "2025-07-03": 59,
+  "2025-07-04": 65
+};
+
+let city2 = {
+  "2025-07-01": 61,
+  "2025-07-02": 57,
+  "2025-07-03": 60,
+  "2025-07-04": 66
+};
+
+let city3 = {
+  "2025-07-01": 55,
+  "2025-07-02": 70,
+  "2025-07-03": 68,
+  "2025-07-04": 56
+};
+
+
+// You are given three objects representing daily weather reports from three different cities. Each key is a date, and each value is the temperature recorded on that day.
+
+// Your task:
+
+// Count how many days were "cold" (< 60°F) and how many were "warm" (>= 60°F) in each city.
+
+// Use separate hashmaps to track the "cold" and "warm" counts per city.
+
+// Return true only if all three cities have the same count of "cold" and "warm" days.
+
+// ---------------------------------
+
