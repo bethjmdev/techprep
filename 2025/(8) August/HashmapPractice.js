@@ -185,3 +185,55 @@ for (let book in library) {
 
 
 // --------------------------------
+
+
+// 9. Gym Equipment
+// Make a hashmap of gym machines and whether they are in use: "treadmill": false, "bench": true, "elliptical": false.
+
+
+// Loop over all machines. For each one, print "in use" or "free".
+
+// true → the machine is in use
+// false → the machine is free
+
+
+
+const gym = {
+  "treadmill" : false,
+  "bench": true,
+  "elliptical" : false
+}
+
+for (let equip in gym) {
+  if (gym[equip] === true) {
+  console.log("in use")
+  } else if (gym[equip] === false) {
+  console.log("free")
+  }
+} 
+
+// --------------------------------
+
+// 10. Light Switches
+// Make a hashmap of rooms and whether the lights are on: "kitchen": true, "bedroom": false, "bathroom": true.
+
+
+// Loop over all rooms. Print "lights on" or "lights off" next to each room name.
+
+
+const house = {
+  'kitchen' : true,
+  'bedroom' : false,
+  'bathroom' : true
+}
+
+
+for (let light in house) {
+  if (house[light] === true) {
+  console.log(light + " lights on")
+  } else {
+  console.log(light + " lights off")
+  }
+}
+
+// --------------------------------
