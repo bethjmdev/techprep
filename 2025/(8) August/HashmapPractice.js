@@ -237,3 +237,25 @@ for (let light in house) {
 }
 
 // --------------------------------
+
+
+// 11. Car Parking Lot
+// Make a hashmap of parking spots and whether they are occupied: "A1": true, "A2": false, "B1": true.
+
+// Loop over all spots. Print "occupied" or "empty" next to the spot name.
+
+const parking = {
+  "A1": true,
+  "A2": false,
+  "B1" : true
+}
+
+for (let spot in parking) {
+  if (parking[spot] === false) {
+  console.log (spot + " empty")
+  } else {
+  console.log(spot + " occupied")
+  }
+}
+
+// --------------------------------
