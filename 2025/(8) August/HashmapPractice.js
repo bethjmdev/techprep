@@ -408,3 +408,89 @@ for (let room in theHouse) {
 
 
 
+
+// --------------------------------
+
+// 21. Parking Spots with Electric Charging
+
+// Make a hashmap of parking spots and whether they are occupied: "A1": true, "A2": false, "B1": true.
+
+// Also make a second hashmap indicating if the spot has a charger: "A1": true, "A2": false, "B1": true.
+
+
+// Loop over all spots. Print "occupied, charging available" if occupied and has charger, otherwise just "occupied" or "empty" as appropriate.
+
+
+const parkinng = {
+  "A1" : true,
+  "A2" : false,
+  "B1" : true
+}
+
+const charger = {
+  "A1" : true,
+  "A2" : false,
+  "B1" : true
+}
+
+
+
+for (let spot in parkinng) {
+  if (parkinng[spot] === true) {
+
+  if (charger[spot] === true) {
+  console.log("occupied, charging available");
+  } else {
+  console.log("occupied")
+  }
+  } else {
+  console.log("empty")
+  }
+
+
+
+}
+
+// --------------------------------
+
+
+
+
+// 22. Pet Feeding with Allergies
+
+// Make a hashmap of pets and whether they have been fed: "dog": true, "cat": false, "hamster": true.
+
+// Also make a second hashmap of whether each pet has special food requirements: "dog": false, "cat": true, "hamster": false.
+
+// Loop over all pets. Print "fed, special diet" if fed and special diet is true, otherwise print "fed" or "needs feeding" as appropriate.
+
+
+
+const animal = {
+  "dog" : true,
+  "cat": false,
+  "hamster": true
+}
+
+const diet = {
+  "dog": false,
+  "cat": true,
+  "hamster": false
+}
+
+
+for (let pet in animal) {
+  if (animal[pet] === true) {
+    if (diet[pet] === true){
+    console.log("fed, special diet")
+    } else {
+    console.log("fed")
+    }
+
+  } else {
+  console.log("needs feeding")
+  }
+}
+
+// --------------------------------
+
