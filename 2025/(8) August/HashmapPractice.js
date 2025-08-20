@@ -798,3 +798,64 @@ console.log("ticket total: $" + newTotal.toFixed(2))
 }
 
 // --------------------------------
+
+
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections. do not give me the answer in english or in code. guide me in english to think about what the right answer might be. if the question doesnt outline a constraint then don't bring it up
+
+// 39. Online Subscriptions with Add-ons
+
+// Hashmap of subscriptions and monthly cost: "basic": 10, "pro": 20, "enterprise": 50
+
+// Hashmap of whether add-on is selected: "basic": true, "pro": false, "enterprise": true
+
+// Loop over subscriptions. Calculate total monthly cost:
+
+// Add $5 if add-on is selected
+
+
+// Apply 20% discount if total (base + add-on) > $30
+
+
+// Print: "subscription total: $X"
+
+
+// --------------
+
+
+const cost = {
+  "basic": 10, 
+  "pro": 20, 
+  "enterprise": 50
+}
+
+const addOn = {
+  "basic": true, 
+  "pro": false, 
+  "enterprise": true
+}
+
+const finalCost = {};
+
+for (let sub in cost){
+
+let addTotal;
+let newTotal;
+
+  if (addOn[sub] === true){
+  addTotal = cost[sub] + 5
+  } else {
+  addTotal = cost[sub]
+  }
+
+  if (addTotal > 30) {
+  newTotal = addTotal - (addTotal * .2);
+  } else {
+  newTotal = addTotal
+  }
+
+
+finalCost[sub] = newTotal;
+
+console.log("subscription total: $" + newTotal.toFixed(2))
+}
