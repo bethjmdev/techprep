@@ -494,3 +494,93 @@ for (let pet in animal) {
 
 // --------------------------------
 
+// 34. Students with Attendance and Exam Scores
+
+// Hashmap of students and attendance count: "Alice": 18, "Bob": 12, "Charlie": 20.
+
+// Hashmap of exam scores: "Alice": 85, "Bob": 70, "Charlie": 92
+
+// Loop over students. Print:
+
+
+// "Alice: eligible for certificate" if attendance ≥ 15 and score ≥ 80
+
+// "Alice: needs improvement" if either condition fails
+
+
+const attendances = {
+  "Alice": 18, 
+  "Bob": 12, 
+  "Charlie": 20
+}
+
+const scores = {
+  "Alice": 85, 
+  "Bob": 70, 
+  "Charlie": 92
+}
+
+
+for (let student in attendances) {
+  if (attendances[student] >= 15 && scores[student] >= 80){
+  console.log(student + ": eligible for certificate")
+  } else {
+  console.log(student + ": needs improvement")
+  }
+}
+
+// --------------------------------
+
+// 33. Online Orders with Discounts and Shipping Costs
+
+// Hashmap of orders and their prices: "101": 120, "102": 75, "103": 200.
+
+// Hashmap of whether the order is expedited: "101": true, "102": false, "103": true.
+
+// Loop over all orders. Calculate total cost:
+
+// Add $20 if expedited
+
+// Apply 10% discount if price > $150
+
+// Print: "Order 101 total: $X" with the calculated total.
+
+
+
+const online = {
+  "101": 120, 
+  "102": 75, 
+  "103": 200
+}
+
+
+const expedited = {
+  "101": true, 
+  "102": false, 
+  "103": true
+}
+
+let postDiscount = {}
+
+for (let order in online) {
+  
+
+  if (online[order] > 150){
+    let subtract = online[order] * .10
+
+    let total = online[order] - subtract
+    postDiscount[order] = total
+    
+  } else {
+    postDiscount[order] = online[order]
+  }
+
+    if (expedited[order] === true) {
+    postDiscount[order] += 20;
+  }
+
+console.log("Order " + order + " total: $" + postDiscount[order])
+}
+
+// --------------------------------
+
