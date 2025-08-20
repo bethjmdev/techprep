@@ -678,3 +678,123 @@ let taxTotal;
    console.log(item + " final price: $" + taxTotal.toFixed(2))
 
 }
+
+// --------------------------------
+
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections. do not give me the answer in english or in code. guide me in english to think about what the right answer might be
+
+
+
+// 37. Hotel Rooms with Extra Charges
+
+// Hashmap of rooms and base price: "101": 150, "102": 200, "103": 120
+
+// Hashmap of whether extra bed is needed: "101": true, "102": false, "103": true
+
+// Loop over rooms. Calculate total price:
+
+// Add $25 if extra bed is needed
+
+// Apply 5% discount if base price > $180
+
+// Print: "Room 102 total: $X"
+
+
+
+
+
+const basePrice ={
+  "101": 150, 
+  "102": 200, 
+  "103": 120
+};
+
+const extraBed ={
+  "101": true, 
+  "102": false, 
+  "103": true
+};
+
+
+let adjustedPrices = {};
+
+let discountTotal; 
+
+for (let room in basePrice) {
+  if (basePrice[room] > 180) {
+  let discount = basePrice[room] * .05
+  discountTotal = basePrice[room] - discount
+  } else {
+  discountTotal = basePrice[room]
+  }
+
+  if (extraBed[room] === true) {
+  discountTotal += 25
+  }
+
+  adjustedPrices[room] = discountTotal
+
+  console.log("Room " + room + " total:$" + discountTotal.toFixed(2))
+
+}
+
+// --------------------------------
+
+
+// 38. Event Tickets with Upgrade
+
+// Hashmap of ticket types and base prices: "standard": 50, "premium": 100, "vip": 200
+
+// Hashmap of whether an upgrade is requested: "standard": false, "premium": true, "vip": false
+
+// Loop over tickets. Calculate final price:
+
+// Apply 10% discount if base price > $150
+
+// Add $30 if upgrade requested
+
+// Print: "ticket total: $X"
+
+// make new hashmap to store totals
+
+
+const price = {
+  "standard": 50, 
+  "premium": 100, 
+  "vip": 200
+}
+
+const upgrade = {
+  "standard": false, 
+  "premium": true, 
+  "vip": false
+}
+
+const finalPrice = {};
+
+
+for (let ticket in price) {
+  
+  let newTotal;
+
+  if (price[ticket] > 150) {
+
+  newTotal = price[ticket] - (price[ticket] * .1);
+
+  } else {
+
+  newTotal = price[ticket]
+
+  }
+
+  if (upgrade[ticket] === true) {
+  newTotal += 30
+  }
+
+finalPrice[ticket] = newTotal
+
+console.log("ticket total: $" + newTotal.toFixed(2))
+}
+
+// --------------------------------
