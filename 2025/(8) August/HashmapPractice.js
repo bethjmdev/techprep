@@ -584,3 +584,97 @@ console.log("Order " + order + " total: $" + postDiscount[order])
 
 // --------------------------------
 
+// 35. Flights with Seats and Upgrades
+
+// Hashmap of flights and number of empty seats: "AA101": 0, "BA202": 5, "DL303": 2
+
+// Hashmap of upgrades available: "AA101": true, "BA202": false, "DL303": true
+
+// Loop over flights. Print:
+
+// "DL303: seats available, upgrade possible" if seats > 0 and upgrade true
+
+// "BA202: seats available" if seats > 0 and upgrade false
+
+// "AA101: fully booked" if seats = 0
+
+
+const flight = {
+  "AA101": 0, 
+  "BA202": 5, 
+  "DL303": 2
+}
+
+const upgrades = {
+  "AA101": true, 
+  "BA202": false, 
+  "DL303": true
+}
+
+for (let seat in flight) {
+  if (flight[seat] > 0 && upgrades[seat] === true) {
+  console.log(seat + ": seats available, upgrade possible")
+  } else if (flight[seat] == 0){
+  console.log("fully booked")
+  } else if (flight[seat] > 0 && upgrades[seat] === false) {
+console.log(seat + ": seats available")
+  }
+}
+
+// --------------------------------
+
+
+// is this correct? do not show me the code if i got it wrong only give me the english corrections. do not give me the answer in english or in code. guide me in english to think about what the right answer might be
+
+
+// 6. Shopping Cart with Tax and Coupons
+
+// Hashmap of items and prices: "shirt": 40, "pants": 60, "jacket": 120
+
+// Hashmap of whether a coupon applies: "shirt": true, "pants": false, "jacket": true
+
+// Loop over all items. Calculate final price:
+
+// Apply 15% discount if coupon applies
+
+// Add 8% sales tax to the discounted price
+// Print: "shirt final price: $X"
+
+//all items get tax on final price
+
+const inventory = {
+  "shirt": 40, 
+  "pants": 60, 
+  "jacket": 120
+}
+
+const coupon = {
+  "shirt": true, 
+  "pants": false, 
+  "jacket": true
+}
+
+
+for (let item in inventory) {
+
+let needsTax;
+let taxTotal;
+
+//figure out if discount
+  if (coupon[item] === true) {
+  let discount = inventory[item] * .15;
+
+  needsTax = inventory[item] - discount;
+
+  } else {
+  needsTax = inventory[item]
+  }
+
+  //calcuate tax
+  let appliedTax = needsTax * .08
+
+  taxTotal = needsTax + appliedTax
+
+   console.log(item + " final price: $" + taxTotal.toFixed(2))
+
+}
