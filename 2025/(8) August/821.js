@@ -54,3 +54,60 @@
   }
 
   // --------------------------------
+
+
+
+// 42. Gym Memberships with Class Packages
+
+// Hashmap of memberships and monthly fee: "basic": 20, "standard": 35, "premium": 60
+
+
+// Hashmap of whether extra class package is purchased: "basic": false, "standard": true, "premium": true
+
+
+// Loop over memberships. Calculate total monthly cost:
+
+// Add $10 if class package is purchased
+
+// Apply 10% discount if base fee + class > $50
+
+// Print: "premium membership total: $X"
+
+
+
+
+const packages = {
+  "basic": 20, 
+  "standard": 35, 
+  "premium": 60
+}
+
+const upgrade = {
+  "basic": false, 
+  "standard": true, 
+  "premium": true
+}
+
+let totalCosts = {}
+
+
+for (let membership in packages) {
+  let newCosts;
+
+  if (upgrade[membership] === true){
+    newCosts = packages[membership] + 10;
+  } else {
+  newCosts = packages[membership];
+  }
+
+  if (newCosts > 50) {
+  newCosts = newCosts - (newCosts * .1);
+  }
+
+    totalCosts[membership] = newCosts;
+
+    console.log(membership + " membership total: $" + newCosts)
+
+}
+
+// --------------------------------
