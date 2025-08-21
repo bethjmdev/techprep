@@ -180,6 +180,7 @@ for (let membership in packages) {
   
   // --------------------------------
 
+  
 
 
 
@@ -250,4 +251,80 @@ for (let membership in packages) {
   
 
 
+  // --------------------------------
+
+
+
+
+
+
+
+  // is this correct? do not show me the code if i got it wrong only give me the english corrections. do not give me the answer in english or in code. guide me in english to think about what the right answer might be. if something is not lined out a a constraint then dont therorize if it is
+
+
+
+//   51. Hotel Bookings with Room Upgrades and Seasonal Surcharges
+
+//   Hashmap of room types and base nightly rate: "single": 80, "double": 120, "suite": 250
   
+//   Hashmap of whether upgrades are chosen: "single": true, "double": false, "suite": true
+  
+//   Hashmap of seasonal multipliers: "single": 1.1, "double": 1.2, "suite": 1.3
+  
+//   Loop over rooms. Calculate nightly cost:
+  
+//   Add $40 for upgrade if chosen.
+  
+//   Multiply the subtotal by the seasonal multiplier.
+  
+//   Apply a city tax of 12% on the subtotal after multiplier.
+  
+//   If final cost exceeds $300, subtract a $25 flat rebate.
+  
+//   Print: "suite booking total: $X"
+  
+  
+  const baseRate = {
+    "single": 80, 
+    "double": 120, 
+    "suite": 250
+  }
+  
+  const upgraded = {
+    "single": true, 
+    "double": false, 
+    "suite": true
+  }
+  
+  const seasonal = {
+    "single": 1.1, 
+    "double": 1.2, 
+    "suite": 1.3
+  }
+  
+  const profit = {}
+  
+  for (let room in base) {
+  
+    let newCost;
+  
+    if (upgraded[room] === true) {
+      newCost = baseRate[room] + 40
+    } else {
+    newCost = baseRate[room]
+    }
+  
+    newCost = newCost * seasonal[room]
+  
+    newCost = newCost + (newCost *.12)
+  
+  
+    if (newCost > 300) {
+    newCost -= 25
+    }
+    
+    profit[room] = newCost;
+  
+    console.log(room + "booking total: $" + newCost.toFixed(2))
+  
+  }
