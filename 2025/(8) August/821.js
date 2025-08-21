@@ -328,3 +328,71 @@ for (let membership in packages) {
     console.log(room + "booking total: $" + newCost.toFixed(2))
   
   }
+
+  // --------------------------------
+
+    // is this correct? do not show me the code if i got it wrong only give me the english corrections. do not give me the answer in english or in code. guide me in english to think about what the right answer might be. if something is not lined out a a constraint then dont therorize if it is
+
+
+// 52. Movie Streaming Rentals with Premium Content and Membership Points
+
+// Hashmap of movies and rental price: "action": 5, "drama": 4, "comedy": 3
+
+// Hashmap of whether premium content is added: "action": true, "drama": false, "comedy": true
+
+// Hashmap of user membership points: "action": 100, "drama": 50, "comedy": 200
+
+// Loop over rentals. Calculate rental total:
+
+// Add $2 for premium content.
+
+// Deduct $1 for every 50 points the user has (round down to nearest 50).
+
+// Apply 5% service fee to the subtotal after point deduction.
+
+// Print: "action rental total: $X"
+
+
+const rental = {
+  "action": 5, 
+  "drama": 4, 
+  "comedy": 3
+}
+
+const premium = {
+  "action": true, 
+  "drama": false, 
+  "comedy": true
+}
+
+
+const points = {
+  "action": 100, 
+  "drama": 50, 
+  "comedy": 200
+}
+
+finalCost = {};
+
+
+for (let movie in rental) {
+
+  let newTotal;
+
+  if (premium[movie] === true) {
+    newTotal = rental[movie] + 2;
+  } else {
+    newTotal = rental[movie]
+  }
+
+  let pointsOff = Math.floor(points[movie] / 50 );
+
+  newTotal = newTotal - pointsOff
+
+  newTotal= newTotal + (newTotal * .05)
+
+  finalCost[movie] = newTotal
+
+  console.log(movie + " rental total $"  + newTotal.toFixed(2))
+
+}
