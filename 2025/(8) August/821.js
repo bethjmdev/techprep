@@ -396,3 +396,6 @@ for (let movie in rental) {
   console.log(movie + " rental total $"  + newTotal.toFixed(2))
 
 }
+
+// --------------------------------
+
