@@ -28,8 +28,39 @@
   }
   
   
-  
-  
   console.log(attendance)
 
   // --------------------------------
+
+
+//   3. Online Shopping Carts
+// You receive multiple shopping carts from different users:
+
+user1: ["apple", "banana", "apple"]  
+user2: ["banana", "orange"]  
+user3: ["apple", "orange", "orange"]  
+
+
+// Build a hashmap to count total demand across all users.
+// Expected output: {"apple": 3, "banana": 2, "orange": 3}
+
+const total1 = user1.concat(user2);
+const finalArray = total1.concat(user3);
+
+
+let fruit = {}
+
+for (let i = 0; i < finalArray.length; i++) {
+
+if (fruit[finalArray[i]] === undefined){
+  fruit[finalArray[i]] = 1
+} else {
+  fruit[finalArray[i]] += 1
+}
+
+}
+
+console.log(fruit)
+
+// --------------------------------
+
