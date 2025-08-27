@@ -44,8 +44,7 @@ user3: ["apple", "orange", "orange"]
 // Build a hashmap to count total demand across all users.
 // Expected output: {"apple": 3, "banana": 2, "orange": 3}
 
-const total1 = user1.concat(user2);
-const finalArray = total1.concat(user3);
+const finalArray = user1.concat(user2, user3);
 
 
 let fruit = {}
@@ -64,3 +63,36 @@ console.log(fruit)
 
 // --------------------------------
 
+
+
+// 4. Classroom Seating Check
+
+// You have a seating chart (row → student):
+
+// {1: "amy", 2: "bob", 3: "carl", 4: "amy"}
+
+// Detect duplicates: find if any student appears more than once.
+// Expected output: ["amy"]
+
+
+const seating = {1: "amy", 2: "bob", 3: "carl", 4: "amy"}
+
+const count = {};
+
+for (let row in seating) {
+  if (count[seating[row]] === undefined) {
+    count[seating[row]] = 1
+  } else {
+  count[seating[row]] += 1
+  }
+
+  }
+
+
+for (let student in count) {
+  if (count[student] > 1){
+  console.log(student)
+  }
+}
+
+// --------------------------------
