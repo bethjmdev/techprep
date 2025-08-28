@@ -114,3 +114,52 @@ console.log(count)
 
 
       // --------------------------------
+
+
+
+
+// 6. Customer Order Validation
+// Given:
+
+// ordered = ["burger", "fries", "fries", "cola"]
+
+// delivered = ["burger", "fries", "cola"]
+
+// Use hashmaps to find which items are missing or duplicated in delivery.
+
+// Expected output: missing 1 fries
+
+
+
+
+ordered = ["burger", "fries", "fries", "cola"]
+
+delivered = ["burger", "fries", "cola"]
+
+
+let food = {}
+
+for (let i = 0; i < ordered.length; i++) {
+	if (food[ordered[i]] === undefined) {
+		food[ordered[i]] = 1
+	} else {
+		food[ordered[i]] += 1
+	}
+}
+
+for (let i = 0; i < delivered.length; i++) {
+	if (food[delivered[i]] === undefined) {
+		food[delivered[i]] = 1
+	} else {
+		food[delivered[i]] += 1
+	}
+}
+
+
+for (let order in food) {
+	if (food[order] !== 2) {
+	console.log("missing" + order)
+	}
+}
+
+// --------------------------------
