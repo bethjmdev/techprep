@@ -60,3 +60,31 @@ for (let i = 0; i < events.length; i++) {
 console.log(enrollment)
 
 // --------------------------------
+
+
+// Club Membership IDs
+// {100: "anna", 101: "luke", 102: "anna", 103: "mike"}
+// Detect duplicate members.
+
+
+
+const club = {100: "anna", 101: "luke", 102: "anna", 103: "mike"};
+
+let member = new Set();
+
+let dupe = new Set();
+
+
+for (let people in club) {
+	if(member.has(club[people])) {
+		dupe.add(club[people])
+	} else {
+		member.add(club[people])
+	}
+}
+
+console.log(dupe)
+
+
+// --------------------------------
+
