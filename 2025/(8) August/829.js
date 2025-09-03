@@ -175,3 +175,103 @@ for (let car in plates) {
 
 
 console.log(duplicate);
+
+// ----------------------------
+
+
+
+// 4. Meeting Notes Keywords
+// You have an array of notes from a meeting:
+
+// ["discuss project timeline", "project budget discussed", "timeline reviewed"]
+
+
+// Use a hashmap to count how many times each word appears in the notes.
+
+// Expected output: {"discuss": 1, "project": 2, "timeline": 2, "budget": 1, "discussed": 1, "reviewed": 1}
+
+
+const meeting = ["discuss project timeline", "project budget discussed", "timeline reviewed"]
+
+let word = {}
+
+for (let i = 0; i < meeting.length; i++) {
+
+
+	let talk = meeting[i].split(" ")
+
+	for (let j = 0; j < talk.length; j++){
+		if (word[talk[j]] === undefined){
+			word[talk[j]] = 1
+		} else {
+		word[talk[j]] += 1
+		}
+	}
+}
+
+console.log(word)
+
+// ----------------------------
+
+
+
+
+// 4. Shopping Items Comparison
+// Two customers made grocery lists:
+
+// custA = ["milk", "eggs", "bread", "cheese"]
+// custB = ["bread", "cheese", "butter", "yogurt"]
+
+
+// Use hashmaps to find:
+
+// Items both customers bought
+
+// Items only custA bought
+
+// Items only custB bought
+
+
+const custA = ["milk", "eggs", "bread", "cheese"]
+const custB = ["bread", "cheese", "butter", "yogurt"]
+
+let aBag = {};
+let bBag = {};
+
+let uniqueA = [];
+let uniqueB = [];
+let both = [];
+
+
+for (let i = 0; i < custA.length; i++) {
+	if (aBag[custA[i]] === undefined) {
+		aBag[custA[i]] = true
+	}
+}
+
+for (let i = 0; i < custB.length; i++) {
+	if (bBag[custB[i]] === undefined) {
+		bBag[custB[i]] = true
+	}
+}
+
+
+for (let item in aBag) {
+	if (bBag[item]) {
+	both.push(item)
+	} else {
+	uniqueA.push(item)
+	}
+}
+
+
+for (let item in bBag) {
+	if (!aBag[item]) {
+	uniqueB.push(item)
+	}
+}
+
+
+console.log(uniqueA, uniqueB, both)
+
+// ----------------------------
