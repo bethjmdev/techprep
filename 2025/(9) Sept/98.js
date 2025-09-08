@@ -135,3 +135,46 @@ console.log(inventory)
 // let letters = ["a","b","c","d","e"];
 // reverseChars(letters);
 // console.log(letters); // ["e","d","c","b","a"]
+
+// --------------------------------
+
+// 2. Check if Array is Sorted
+
+// Given an integer array nums, return true if it is sorted in non-decreasing order, otherwise false.
+// Use two pointers (one at start, one at end) to compare and narrow down.
+
+// Example
+// Input: [1, 2, 2, 3] → true
+// Input: [3, 2, 1] → false
+
+
+
+// [1, 2, 2, 3]
+// [3, 2, 1] 
+
+const fun = (example) => {
+	
+let left = 0;
+
+let right = left + 1;
+
+while (right < example.length) {
+	
+	if(example[left] > example[right]) {
+	return false
+	}
+
+
+left++;
+
+right++;
+}
+
+
+return true
+
+
+}
+
+
+// --------------------------------
