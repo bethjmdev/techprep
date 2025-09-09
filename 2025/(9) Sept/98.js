@@ -178,3 +178,39 @@ return true
 
 
 // --------------------------------
+
+
+// 3. Pair Sum in Sorted Array
+
+// You are given a sorted array of integers nums and a target integer target.
+
+// Return true if there exist two numbers in nums that sum to target.
+
+// Example
+// Input: nums = [1,2,3,4,6], target = 6
+// Output: true (because 2 + 4 = 6)
+
+
+
+const example = [1,2,3,4,6]
+
+
+for (let i = 0; i < example.length; i++) {
+	let left = example[i];
+
+for (let j = i + 1; j < example.length; j++) {
+	let right = example[j];
+
+	if (left + right == target) {
+	return true
+	}
+
+}
+	
+
+	}
+
+
+    // --------------------------------
+
+    
