@@ -99,3 +99,182 @@ console.log(remaining)
 // }
 
 // --------------------------------
+
+
+// 👉 Goal: Just move two pointers toward each other and observe their positions.
+
+
+// Question:
+// Given string array ["x","y","z","q"], show the indices of left and right each round.
+
+
+// Example Output:
+// left=0, right=3
+// left=1, right=2
+
+
+// -------
+
+
+// const s = ["x","y","z","q"]
+
+// let left = 0;
+// let right = s.length -1;
+
+// while (left < right) {
+// 	console.log("left =" + left)
+// 	console.log("right =" + right)
+
+// 	left++
+// 	right--
+// }
+
+// --------------------------------
+
+// Step 2: Move One Pointer Conditionally
+
+// 👉 Goal: Move only the left pointer until it reaches a value greater than 3.
+
+
+
+// Question:
+// Given [1, 2, 3, 4, 5, 6], move a left pointer and print its index and value each round until you reach a value > 3.
+
+
+
+// Example Output:
+
+// left index: 0, value: 1
+// left index: 1, value: 2
+// left index: 2, value: 3
+
+
+// let s = [1, 2, 3, 4, 5, 6];
+
+// let left = 0;
+
+// while (s[left] <= 3) {
+// 	console.log("index" + left + "value" + s[left])
+
+// 	left++
+// }
+
+// --------------------------------
+
+
+
+// Step 3: Move Two Pointers, Right Only if Even
+
+
+// 👉 Goal: 
+
+// Move left one step every round, 
+
+// move right only if it points at an even number.
+
+
+// Question:
+// Given [5, 8, 12, 7, 4], print left and right values each round.
+
+// Example Output:
+
+// left: 5, right: 4
+// left: 8, right: 4
+// left: 12, right: 4
+// left: 7, right: 4
+
+
+// const s = [5, 8, 12, 7, 4]
+
+// left = 0;
+// right = s.length - 1;
+
+
+// while (left < s.length) {
+// 	console.log(s[left])
+// 	console.log(s[right])
+
+// 	if (s[right] % 2 === 0) {
+// 		right--
+// 	}
+
+// 	left++
+// }
+
+
+// --------------------------------
+
+
+
+// Step 4: Cross Pointers with Different Steps
+
+// 👉 Goal: Move left by 2 and 
+// right by 1 each round until they cross.
+
+// Question:
+// Given [10, 20, 30, 40, 50, 60, 70], 
+
+// print the values the pointers are pointing at each round.
+
+// Example Output:
+
+// left: 10, right: 70
+// left: 30, right: 60
+// left: 50, right: 50
+
+// const s = [10, 20, 30, 40, 50, 60, 70];
+
+// let left = 0;
+// let right = s.length - 1;
+
+// while (left < right) {
+// 	console.log(s[left], s[right])
+
+// 	left+=2
+// 	right--
+// }
+
+
+// --------------------------------
+
+
+
+// Step 5: Stop Only One Pointer
+
+
+// 👉 Goal: While left <= 40 → right stays still.
+
+// When left > 40 → right-- each round.
+
+
+
+// Question:
+// Given [5, 15, 25, 35, 45, 55, 65], print both values each round.
+
+
+// left: 5, right: 65
+// left: 15, right: 65
+// left: 25, right: 65
+// left: 35, right: 65
+// left: 45, right: 65
+// left: 55, right: 65
+// left: 65, right: 65
+
+
+
+// const s = [5, 15, 25, 35, 45, 55, 65]
+
+// left = 0;
+// right = s.length - 1;
+
+// while (left < s.length) {
+	
+// 	console.log(s[left], s[right])
+
+// 	if (s[left] > 40) {
+// 	right--
+// 	}
+
+// 	left++
+
+// }
