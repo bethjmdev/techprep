@@ -214,3 +214,72 @@
 
 // s[left] = s[right]
 // s[right] = storage
+
+// --------------------------------
+
+
+// Valid Palindrome
+// Given a string s, return true if it is a palindrome, otherwise return false.
+
+// A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
+
+// Note: Alphanumeric characters consist of letters (A-Z, a-z) and numbers (0-9).
+
+// Example 1:
+
+// Input: s = "Was it a car or a cat I saw?"
+
+// Output: true
+
+
+// s = replace(/[^\w\s]|_/g, '').toLowerCase().split(' ').join('');
+
+// let left = 0;
+// let right = s.length - 1;
+
+// while (left < right) {
+
+// 	if (s[left] === s[right]) {
+// 		left++
+// 		right--
+// 	} else {
+// 		return false
+// 	}
+	
+	
+// }
+
+
+// 	return true
+
+// --------------------------------
+
+// Given an array of integers numbers that is sorted in non-decreasing order.
+
+// Return the indices (1-indexed) of two numbers, [index1, index2], such that they add up to a given target number target and index1 < index2. Note that index1 and index2 cannot be equal, therefore you may not use the same element twice.
+
+// There will always be exactly one valid solution.
+
+
+// numbers = [1,2,3,4]
+// target = 3;
+
+// let left = 0
+// let right = left + 1;
+
+// while (left < numbers.length - 1) {
+
+
+// 	while (right < numbers.length) {
+// 		if (numbers[left] + numbers[right] === target) {
+// 			return [left + 1, right + 1];
+// 		}
+
+// 		right++
+// 	}
+
+	
+// 	left++
+// 	right = left + 1;
+
+// }
