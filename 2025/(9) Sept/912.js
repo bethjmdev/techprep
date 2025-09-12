@@ -128,3 +128,89 @@
 // --------------------------------
 
 
+// Step 2: Swapping Two Elements (no pointers)
+
+// 👉 Goal: Just learn how to swap elements directly by index.
+
+// Question:
+// Swap the first two elements of ["dog", "cat"].
+
+// Example Output:
+
+// ["cat", "dog"]
+
+
+// const s = ["cat", "dog"]
+
+// let left = 0;
+// let right = s.length - 1;
+
+
+// let storage = s[right]
+
+// s[right] = s[left];
+
+// s[left] = storage;
+
+// --------------------------------
+
+
+// Question:
+// Swap the 2nd and 4th elements of [1, 2, 3, 4].
+
+// Example Output:
+
+// [1, 4, 3, 2]
+
+
+
+// const s = [1, 2, 3, 4];
+
+// let storage = s[3]
+
+// s[3] = s[1]
+// s[1] = storage
+
+// --------------------------------
+
+
+// Question:
+// Swap the first and last elements of [100, 200, 300, 400, 500].
+
+// Example Output:
+
+// [500, 200, 300, 400, 100]
+
+
+// const s = [100, 200, 300, 400, 500]
+
+// let storage = s[s.length - 1]
+
+
+// s[s.length - 1] = s[0]
+// s[0] = storage
+
+// --------------------------------
+
+
+// Step 3: Swap Only First and Last Element (start of the two-pointer idea)
+
+// 👉 Goal: Practice swapping outer elements, but stop after one swap.
+
+// Question:
+// Given array ["h","e","l","l","o"], swap only the first and last characters.
+
+// Example Output:
+
+// ["o","e","l","l","h"]
+
+
+// const s = ["h","e","l","l","o"]
+
+// let left = 0
+// let right = s.length - 1;
+
+// let storage = s[left]
+
+// s[left] = s[right]
+// s[right] = storage
