@@ -114,3 +114,128 @@
 
 // --------------------------------
 
+// Step 3: Compare with target
+
+// Given a middle element and a target, decide whether the target is equal to, less than, or greater than the middle element.
+
+// Array: [3, 7, 10, 15, 20]
+
+// Targets to compare: 7
+
+
+// const nums = [3, 7, 10, 15, 20]
+
+// const target = 7
+
+// let middle = Math.floor(nums.length / 2)
+
+// let element = nums[middle]
+
+// if (element < target) {
+// 	console.log("less than")
+// } else if( element === target) {
+// 	console.log("equal to")
+// } else {
+// 	console.log("greater than")
+// }
+
+// --------------------------------
+
+// Step 3: Compare with target
+
+// Given a middle element and a target, decide whether the target is equal to, less than, or greater than the middle element.
+
+// Array: [3, 7, 10, 15, 20]
+
+// Targets to compare: 7
+
+
+// const nums = [3, 7, 10, 15, 20]
+
+// const target = 7
+
+// let middle = Math.floor(nums.length / 2)
+
+// let element = nums[middle]
+
+// if (element < target) {
+// 	console.log("less than")
+// } else if( element === target) {
+// 	console.log("equal to")
+// } else {
+// 	console.log("greater than")
+// }
+
+// --------------------------------
+
+
+
+
+// Step 4: Adjusting search range
+
+// Practice writing or saying which half of the array to keep searching in:
+
+// If target < middle element → look in the left half.
+
+// If target > middle element → look in the right half.
+
+
+
+// Array: [1, 3, 5, 7, 9, 11]
+// Middle element = 5 (index 2)
+
+// Target = 1 → ?
+
+// Target = 11 → ?
+
+// Target = 5 → ?
+
+
+
+// const nums = [1, 3, 5, 7, 9, 11];
+// const target = 11
+
+// let middleInt = Math.floor( nums.length / 2)
+// let middle = nums[middleInt]
+
+
+// if (target < middle) {
+// 	let left = nums.slice(0, middleInt)
+// 	console.log(left)
+// } else {
+// 	let right = nums.slice(middleInt + 1, nums.length)
+// 	console.log(right)
+// }
+
+// --------------------------------
+
+
+
+// Input: 
+// nums = [3, 7, 10, 15, 20, 25, 30], target = 15
+// Output: 3
+
+
+
+// const nums = [3, 7, 10, 15, 20, 25, 30]
+// const target = 15
+
+// let left = 0
+// let right = nums.length - 1;
+
+// let middle;
+
+// while ( left <= right){
+
+// middle = Math.floor((left + right) / 2)
+
+// 	if (nums[middle] === target) {
+// 		return middle
+// 	} else if (nums[middle] < target) {
+// 		left = middle + 1
+// 	} else {
+// 		right = middle - 1
+// 	}
+// }
+
+// return -1
