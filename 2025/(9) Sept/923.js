@@ -46,3 +46,57 @@
 // }
 
 // --------------------------------
+
+
+// /**
+//  * @param {number[]} nums
+//  * @return {boolean}
+//  */
+// var containsDuplicate = function(nums) {
+//     let dupe = new Set();
+//     let unique = new Set();
+
+//     for (let i = 0; i < nums.length; i++) {
+//         if (unique.has(nums[i])) {
+//             dupe.add(nums[i])
+//         } else {
+//             unique.add(nums[i])
+//         }
+//     }
+
+//     if (dupe.size > 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// };
+
+// --------------------------------
+
+
+
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+// var majorityElement = function(nums) {
+//     let n = nums.length / 2;
+//     let map = {};
+
+//     for (let i = 0; i < nums.length; i++) {
+//         let number = nums[i]
+//         if (map[number] === undefined){
+//             map[number] = 1
+//         } else {
+//             map[number] += 1
+//         }
+//     }
+
+//     //need to find out what value in total > n
+
+//     for (let total in map) {
+//         if (map[total] >= n) {
+//             return Number(total);
+//         }
+//     }
+// };
