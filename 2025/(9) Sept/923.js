@@ -100,3 +100,40 @@
 //         }
 //     }
 // };
+
+// --------------------------------
+
+
+
+
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// var isPalindrome = function(s) {
+
+
+//     let t = s.toLowerCase().replace(/[^\w]|_/g, "")
+//     //make all lowercase
+//     //remove spaces
+//     //remove punctuation
+    
+//     let left = 0;
+//     let right = t.length - 1;
+    
+//     for (let i = 0; i < t.length; i++){
+    
+//         if (t[left] !== t[right]) {
+//         return false
+//         } else {
+//         left++
+//         right--
+//         }
+    
+//     }
+    
+//     return true
+//     };
+
+// --------------------------------
+
