@@ -1,0 +1,14 @@
+# Disable Cursor AI for this workspace
+*.js
+*.ts
+*.jsx
+*.tsx
+*.py
+*.java
+*.cpp
+*.c
+*.html
+*.css
+*.scss
+*.json
+*.md

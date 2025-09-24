@@ -4,36 +4,36 @@
 
 // Example:
 
-// nums = [1, 3, 5, 7, 9], target = 5
+nums = [1, 3, 5, 7, 9], target = 5
 
-// Output: 2   // 5 is at index 2
+Output: 2   // 5 is at index 2
 
-// nums = [1, 3, 5, 7, 9], target = 6
-// Output: -1  // 6 is not in the array
+nums = [1, 3, 5, 7, 9], target = 6
+Output: -1  // 6 is not in the array
 
 
-// let left = 0
-// let right = nums.length - 1
-// let middle;
+let left = 0
+let right = nums.length - 1
+let middle;
 
-// while (left <= right ) {
+while (left <= right ) {
 	
-// 	middle = Math.floor((left + right) / 2);
-// 	let midNum = nums[middle]
+	middle = Math.floor((left + right) / 2);
+	let midNum = nums[middle]
 
 	
-// 	if (target === midNum) {
-// 	return middle
-// 	}
-// 	else if (midNum < target) {
-// 		left = middle + 1
-// 	} else {
-// 		right = middle - 1
-// 	}
+	if (target === midNum) {
+	return middle
+	}
+	else if (midNum < target) {
+		left = middle + 1
+	} else {
+		right = middle - 1
+	}
 
-// }
+}
 
-// return -1
+return -1
 
 // --------------------------------
 
