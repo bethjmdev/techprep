@@ -1,69 +1,44 @@
 /**
  * @param {number[]} nums
+ * @param {number} target
  * @return {number}
  */
-var removeDuplicates = function(nums) {
-    // implement here
-
-    // console.log("nums", nums)
-    let left = 0;
-    let right = left + 1;
-
-    // let right = nums.length - 1;
-
-    while (right < nums.length) {
-        // console.log("while loop running")
-
-        // console.log("left",nums[left], "index",left,"right", nums[right],"index", right)
-
-        if (nums[left] === nums[right]) {
-            // console.log("## if loop running")
-            //remove the element
-            nums.splice(right, 1);
-            // console.log("nums after splice",nums)
-            //move right over one, leave left where it is
-            // right++
-            
-        } else {
-            // console.log("## ELSE RUNNING")
-            //move items over one
-            left+=1
-            right+=1
-        }
-
-
-    }
-
-// console.log("after",nums)
-    return (nums.length)
-
-
+var searchInsert = function(nums, target) {
+    // your code here
 };
 
-// --- Test cases ---
-function test(nums, expectedNums) {
-    console.log("____________________________");
 
-    let copy = [...nums];
-    let k = removeDuplicates(nums);
-    // console.log("Input:", copy);
-    console.log("Returned k:",k);
-    console.log("Returned k:", k.length);
-    console.log("Expected k:", expectedNums.length);
-    console.log("Expected nums:", expectedNums);
-    console.log("____________________________");
-}
 
-test([1,1,2], [1,2]);
-test([0,0,1,1,1,2,2,3,3,4], [0,1,2,3,4]);
-test([], []);
-test([1], [1]);
-test([1,1,1,1], [1]);
-test([1,2,3], [1,2,3]);
-test([2,2,3,3,4,4,5,5,6], [2,3,4,5,6]);
-test([1,1,2,3,3,4,5,5,5,6], [1,2,3,4,5,6]);
-test([-3,-3,-2,-1,-1,0,0,1,2,2,3], [-3,-2,-1,0,1,2,3]);
-test([100,100,101,102,102,103,104,104,105], [100,101,102,103,104,105]);
-test([5,5,5,5,5,5,5,5,5], [5]);
-test([1,2,2,3,4,4,5,6,7,7,7,8], [1,2,3,4,5,6,7,8]);
-test([1,1,2,2,2,3,3,4,4,4,4,5], [1,2,3,4,5]);
+// ----------------------
+// Test cases
+// ----------------------
+const tests = [
+    { nums: [1,3,5,6], target: 5, expected: 2 },
+    { nums: [1,3,5,6], target: 2, expected: 1 },
+    { nums: [1,3,5,6], target: 7, expected: 4 },
+    { nums: [1,3,5,6], target: 0, expected: 0 },
+    { nums: [1], target: 0, expected: 0 },
+    { nums: [1], target: 2, expected: 1 },
+    { nums: [2,4,6,8,10], target: 6, expected: 2 },
+    { nums: [2,4,6,8,10], target: 9, expected: 4 },
+    { nums: [2,4,6,8,10], target: 1, expected: 0 },
+    { nums: [10,20,30,40,50], target: 35, expected: 3 },
+    { nums: [10,20,30,40,50], target: 10, expected: 0 },
+    { nums: [10,20,30,40,50], target: 55, expected: 5 },
+];
+
+
+
+// ----------------------
+// Test runner
+// ----------------------
+tests.forEach(({ nums, target, expected }, i) => {
+    const result = searchInsert([...nums], target);
+    const pass = result === expected;
+
+    console.log(`Test ${i + 1}: nums = [${nums}], target = ${target}`);
+    console.log(` result: ${result}`);
+    console.log(` expected: ${expected}`);
+    console.log(` ✅ ${pass ? "PASS" : "FAIL"}`);
+    console.log('--------------------------------');
+});
