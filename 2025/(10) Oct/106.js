@@ -1,66 +1,131 @@
-/**
- * @param {number[]} nums
- * @param {number} val
- * @return {number}
- */
-var removeElement = function(nums, val) {
+// /**
+//  * @param {number[]} nums
+//  * @param {number} val
+//  * @return {number}
+//  */
+// var removeElement = function(nums, val) {
 
 
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === val) {
-            nums.splice(i, 1)
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === val) {
+//             nums.splice(i, 1)
 
-            i--
-        }
+//             i--
+//         }
 
-    }
+//     }
 
-    return nums.length
-    //return the length
-
-
-};
+//     return nums.length
+//     //return the length
 
 
-
-// ----------------------
-// Test cases to run below
-// ----------------------
-const tests = [
-    { nums: [3,2,2,3], val: 3, expectedNums: [2,2], expectedK: 2 },
-    { nums: [0,1,2,2,3,0,4,2], val: 2, expectedNums: [0,1,3,0,4], expectedK: 5 },
-    { nums: [1,1,1,1], val: 1, expectedNums: [], expectedK: 0 },
-    { nums: [4,5], val: 4, expectedNums: [5], expectedK: 1 },
-    { nums: [], val: 0, expectedNums: [], expectedK: 0 },
-    { nums: [2,3,3,2,2,3], val: 2, expectedNums: [3,3,3], expectedK: 3 },
-    { nums: [0,0,0,1,2,3,0], val: 0, expectedNums: [1,2,3], expectedK: 3 },
-    { nums: [1,2,3,4,5], val: 9, expectedNums: [1,2,3,4,5], expectedK: 5 },
-    { nums: [9,9,9,9,9,9], val: 9, expectedNums: [], expectedK: 0 },
-    { nums: [5,6,7,8,9], val: 7, expectedNums: [5,6,8,9], expectedK: 4 },
-];
+// };
 
 
 
-// ----------------------
-// Test runner
-// ----------------------
-tests.forEach(({ nums, val, expectedNums, expectedK }, i) => {
-    const arrCopy = [...nums];
-    const k = removeElement(arrCopy, val);
-    const firstK = arrCopy.slice(0, k).sort((a, b) => a - b);
-    const expectedSorted = [...expectedNums].sort((a, b) => a - b);
-
-    const pass = (k === expectedK) && 
-                 (JSON.stringify(firstK) === JSON.stringify(expectedSorted));
-
-    console.log(`Test ${i + 1}:`);
-    console.log(` input: nums = [${nums}], val = ${val}`);
-    console.log(` result: k = ${k}, nums = [${arrCopy.join(', ')}]`);
-    console.log(` expected: k = ${expectedK}, nums = [${expectedNums.join(', ')}]`);
-    console.log(` ✅ ${pass ? "PASS" : "FAIL"}`);
-    console.log('--------------------------------');
-});
+// // ----------------------
+// // Test cases to run below
+// // ----------------------
+// const tests = [
+//     { nums: [3,2,2,3], val: 3, expectedNums: [2,2], expectedK: 2 },
+//     { nums: [0,1,2,2,3,0,4,2], val: 2, expectedNums: [0,1,3,0,4], expectedK: 5 },
+//     { nums: [1,1,1,1], val: 1, expectedNums: [], expectedK: 0 },
+//     { nums: [4,5], val: 4, expectedNums: [5], expectedK: 1 },
+//     { nums: [], val: 0, expectedNums: [], expectedK: 0 },
+//     { nums: [2,3,3,2,2,3], val: 2, expectedNums: [3,3,3], expectedK: 3 },
+//     { nums: [0,0,0,1,2,3,0], val: 0, expectedNums: [1,2,3], expectedK: 3 },
+//     { nums: [1,2,3,4,5], val: 9, expectedNums: [1,2,3,4,5], expectedK: 5 },
+//     { nums: [9,9,9,9,9,9], val: 9, expectedNums: [], expectedK: 0 },
+//     { nums: [5,6,7,8,9], val: 7, expectedNums: [5,6,8,9], expectedK: 4 },
+// ];
 
 
 
-// ----------------------------
+// // ----------------------
+// // Test runner
+// // ----------------------
+// tests.forEach(({ nums, val, expectedNums, expectedK }, i) => {
+//     const arrCopy = [...nums];
+//     const k = removeElement(arrCopy, val);
+//     const firstK = arrCopy.slice(0, k).sort((a, b) => a - b);
+//     const expectedSorted = [...expectedNums].sort((a, b) => a - b);
+
+//     const pass = (k === expectedK) && 
+//                  (JSON.stringify(firstK) === JSON.stringify(expectedSorted));
+
+//     console.log(`Test ${i + 1}:`);
+//     console.log(` input: nums = [${nums}], val = ${val}`);
+//     console.log(` result: k = ${k}, nums = [${arrCopy.join(', ')}]`);
+//     console.log(` expected: k = ${expectedK}, nums = [${expectedNums.join(', ')}]`);
+//     console.log(` ✅ ${pass ? "PASS" : "FAIL"}`);
+//     console.log('--------------------------------');
+// });
+
+
+
+// // ----------------------------/**
+//  * @param {number[]} nums
+// * @param {number} target
+// * @return {number}
+// */
+// var searchInsert = function(nums, target) {
+   
+//    let left = 0;
+//    let right = nums.length - 1;
+
+//    while (left <= right) {
+//        mid = Math.floor((left + right) / 2 )
+
+//        if (nums[mid] === target) {
+//            return mid
+//        } 
+       
+       
+//        if (nums[mid] < target) {
+//            left = mid + 1;
+//        } else {
+//            right = mid - 1;
+//        }
+//    }
+
+
+  
+//    return left
+
+// };
+
+
+
+// // ----------------------
+// // Test cases
+// // ----------------------
+// const tests = [
+//    { nums: [1,3,5,6], target: 5, expected: 2 },
+//    { nums: [1,3,5,6], target: 2, expected: 1 },
+//    { nums: [1,3,5,6], target: 7, expected: 4 },
+//    { nums: [1,3,5,6], target: 0, expected: 0 },
+//    { nums: [1], target: 0, expected: 0 },
+//    { nums: [1], target: 2, expected: 1 },
+//    { nums: [2,4,6,8,10], target: 6, expected: 2 },
+//    { nums: [2,4,6,8,10], target: 9, expected: 4 },
+//    { nums: [2,4,6,8,10], target: 1, expected: 0 },
+//    { nums: [10,20,30,40,50], target: 35, expected: 3 },
+//    { nums: [10,20,30,40,50], target: 10, expected: 0 },
+//    { nums: [10,20,30,40,50], target: 55, expected: 5 },
+// ];
+
+
+
+// // ----------------------
+// // Test runner
+// // ----------------------
+// tests.forEach(({ nums, target, expected }, i) => {
+//    const result = searchInsert([...nums], target);
+//    const pass = result === expected;
+
+//    console.log(`Test ${i + 1}: nums = [${nums}], target = ${target}`);
+//    console.log(` result: ${result}`);
+//    console.log(` expected: ${expected}`);
+//    console.log(` ✅ ${pass ? "PASS" : "FAIL"}`);
+//    console.log('--------------------------------');
+// });
