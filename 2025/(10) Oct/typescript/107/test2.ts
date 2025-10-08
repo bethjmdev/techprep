@@ -1,6 +1,6 @@
-type Food = string
+// type Food = string
 
-let favoriteFood: Food = "pizza"
+// let favoriteFood: Food = "pizza"
 
 
 //--------
@@ -38,3 +38,12 @@ let person2: Person = {
 }
 
 //------
+
+
+function displayInfo(person: Person) {
+    console.log(`${person.name} lives at ${person.address?.street}`)
+
+}
+
+
+displayInfo(person1)

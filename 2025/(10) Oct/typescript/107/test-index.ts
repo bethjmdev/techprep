@@ -1,9 +1,17 @@
+//     https://www.youtube.com/watch?v=SpwzRDUQ1GI&t=975s
+
 
 type Pizza = {
     name: string
     price: number
 }
 
+
+type Order = {
+    id: number
+    pizza: Pizza
+    status: string
+}
 
 const menu = [
     {name: "Margherita", price: 8},
@@ -27,7 +35,7 @@ function addNewPizza(pizzaObj: Pizza){
 }
 
 
-function placeOrder(pizzaName){
+function placeOrder(pizzaName: string){
 
     const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
 
