@@ -6,11 +6,12 @@ type Pizza = {
     price: number
 }
 
+type Status = 'ordered' | 'completed'
 
 type Order = {
     id: number
     pizza: Pizza
-    status: string
+    status: Status
 }
 
 const menu = [
@@ -23,7 +24,7 @@ const menu = [
 
 let cashInRegister = 100;
 let nextOrderId = 1;
-let orderQueue = []
+let orderQueue: Order[] = []
 
 
 
@@ -46,7 +47,7 @@ function placeOrder(pizzaName: string){
 
     cashInRegister += selectedPizza.price
 
-    const newOrder = {id: nextOrderId++, pizza: selectedPizza, status: "ordered"};
+    const newOrder:Order = {id: nextOrderId++, pizza: selectedPizza, status: "ordered"};
 
     orderQueue.push(newOrder)
 
@@ -58,6 +59,11 @@ function placeOrder(pizzaName: string){
 function completeOrder(orderId: number) {
 
     const order = orderQueue.find(order => order.id === orderId)
+
+    if (!order){
+        console.log(`{orderId} was not foudn in order orderQueue`)
+        return
+    }
 
     order.status = "completed"
 

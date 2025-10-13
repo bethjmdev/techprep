@@ -27,3 +27,5 @@ let people2: People = {
 //These do the same thing
 let peoples: People[] = [people1, people2];
 let poodles: Array<People> = [people1, people2];
+
+
