@@ -15,29 +15,32 @@ type Order = {
     status: Status
 }
 
-const menu: Pizza[] = [
-    {id: 1, name: "Margherita", price: 8},
-    {id: 2, name: "Pepperoni", price: 10},
-    {id: 3, name: "Hawaiian", price: 10},
-    {id: 4, name: "Veggie", price: 9},
-]
-
-
 let cashInRegister = 100;
 let nextOrderId = 1;
 let orderQueue: Order[] = []
 
+let nextPizzaId = 1;
+
+const menu: Pizza[] = [
+    {id: nextPizzaId++, name: "Margherita", price: 8},
+    {id: nextPizzaId++, name: "Pepperoni", price: 10},
+    {id: nextPizzaId++, name: "Hawaiian", price: 10},
+    {id: nextPizzaId++, name: "Veggie", price: 9},
+]
 
 
 
-function addNewPizza(pizzaObj: Pizza){
+
+
+//dosnt change the function not returning something but it tells us or other devs that it's not supposed to return anything
+function addNewPizza(pizzaObj: Pizza): void{
+    pizzaObj["id"] = nextPizzaId++
 
     menu.push(pizzaObj)
-
 }
 
 
-function placeOrder(pizzaName: string){
+function placeOrder(pizzaName: string): Order | undefined{
 
     const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
 
@@ -57,12 +60,12 @@ function placeOrder(pizzaName: string){
 }
 
 
-function completeOrder(orderId: number) {
+function completeOrder(orderId: number): Order | undefined {
 
     const order = orderQueue.find(order => order.id === orderId)
 
     if (!order){
-        console.log(`{orderId} was not foudn in order orderQueue`)
+        console.log(`${orderId} was not found in orderQueue`)
         return
     }
 
@@ -74,7 +77,8 @@ function completeOrder(orderId: number) {
 
 
 
-export const getPizzaDetail = (identifier: string | number) => {
+//use undefined in the case that it is possible it could be an undefined value
+export const getPizzaDetail = (identifier: string | number): Pizza | undefined => {
 
     //go into the menu and look at the number or string
     //access that pizza and print that info
@@ -82,28 +86,36 @@ export const getPizzaDetail = (identifier: string | number) => {
     // for (let i = 0; i < menu.length; i++) {
     //     if (menu[i].id === identifier || menu[i].name === identifier){
     //         console.log(menu[i])
-    //     }
+    //     } 
     // }
 
 
     if (typeof identifier === "string") {
         return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase())
-    } else if (typeof identifier === "number"){
+    } 
+    //instead of just doing else  do else if and incldue the value it should be 
+    // so that if the TS code is used in JS then  there will be a fail 
+    // safe for the error handling
+    else if (typeof identifier === "number"){
         return menu.find(pizza => pizza.id === identifier)
  
     } else {
+        //also include this to throw an error to help manage bugs
         throw new TypeError("identifier must be string or num")
     }
 
 }
 
 
+//if you use any you are turinnign off typescript cehcking 
+
+
 //--------  
 
 
-addNewPizza({id: 5, name: "Chicken Bacon Ranch", price: 12})
-addNewPizza({id: 6, name: "BBQ", price: 12})
-addNewPizza({id: 7,name: "Spicy Sausage", price: 11})
+addNewPizza({name: "Chicken Bacon Ranch", price: 12})
+addNewPizza({name: "BBQ", price: 12})
+addNewPizza({name: "Spicy Sausage", price: 11})
 
 
 placeOrder("Chicken Bacon Ranch")
@@ -111,5 +123,5 @@ completeOrder(1)
 
 
 console.log("menu", menu)
-console.log("cash in reg", cashInRegister)
-console.log("Order Queue", orderQueue)
+// console.log("cash in reg", cashInRegister)
+// console.log("Order Queue", orderQueue)
