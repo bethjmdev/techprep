@@ -56,3 +56,41 @@
 
 
   // --------------------------------------------------
+
+
+
+
+  //first step is plannign for arrays where k > length of aray and returning null or -1
+
+  //initate the values we'll need
+
+  //add up the first k numbers in the array
+
+  //do a for loop for the sliding window effect and subtract the previous k from the max sum then add int he current k
+
+  //check if maxSum is greater than curretnSum, if so then update maxSum
+
+
+  if (nums.length < k) {
+    return null
+  }
+
+  let currentSum = 0;
+  let maxSum = 0;
+
+  for (let i = 0; i < k; i++) {
+    currentSum += nums[i]
+  }
+
+  maxSum = currentSum
+
+  for (let end = k; end < nums.length; end++) {
+
+    currentSum = (currentSum - nums[end - k]) + nums[end]
+
+    if (currentSum > maxSum){
+        maxSum = currentSum
+    }
+  }
+
+  return maxSum

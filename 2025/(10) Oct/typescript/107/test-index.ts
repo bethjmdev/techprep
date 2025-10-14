@@ -2,6 +2,7 @@
 
 
 type Pizza = {
+    id: number
     name: string
     price: number
 }
@@ -14,11 +15,11 @@ type Order = {
     status: Status
 }
 
-const menu = [
-    {name: "Margherita", price: 8},
-    {name: "Pepperoni", price: 10},
-    {name: "Hawaiian", price: 10},
-    {name: "Veggie", price: 9},
+const menu: Pizza[] = [
+    {id: 1, name: "Margherita", price: 8},
+    {id: 2, name: "Pepperoni", price: 10},
+    {id: 3, name: "Hawaiian", price: 10},
+    {id: 4, name: "Veggie", price: 9},
 ]
 
 
@@ -70,12 +71,39 @@ function completeOrder(orderId: number) {
     return order
 }
 
+
+
+
+export const getPizzaDetail = (identifier: string | number) => {
+
+    //go into the menu and look at the number or string
+    //access that pizza and print that info
+
+    // for (let i = 0; i < menu.length; i++) {
+    //     if (menu[i].id === identifier || menu[i].name === identifier){
+    //         console.log(menu[i])
+    //     }
+    // }
+
+
+    if (typeof identifier === "string") {
+        return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase())
+    } else if (typeof identifier === "number"){
+        return menu.find(pizza => pizza.id === identifier)
+ 
+    } else {
+        throw new TypeError("identifier must be string or num")
+    }
+
+}
+
+
 //--------  
 
 
-addNewPizza({name: "Chicken Bacon Ranch", price: 12})
-addNewPizza({name: "BBQ", price: 12})
-addNewPizza({name: "Spicy Sausage", price: 11})
+addNewPizza({id: 5, name: "Chicken Bacon Ranch", price: 12})
+addNewPizza({id: 6, name: "BBQ", price: 12})
+addNewPizza({id: 7,name: "Spicy Sausage", price: 11})
 
 
 placeOrder("Chicken Bacon Ranch")
