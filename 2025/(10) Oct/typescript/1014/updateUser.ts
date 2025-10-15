@@ -6,6 +6,8 @@ type User = {
     role: UserRole
 }
 
+type UpdatedUser = Partial<User>
+
 const users: User[]= [
     {id: 1, username: "john_doe", role: "member"},
     {id: 2, username: "jane_smith", role: "contributor"},
@@ -13,7 +15,7 @@ const users: User[]= [
     {id: 4, username: "charlie_brown", role: "member"}
 ]
 
-function updateUser(id: number, updates: any) {
+function updateUser(id: number, updates: UpdatedUser) {
    const foundUser = users.find(user => user.id === id)
 
    if(!foundUser) {
