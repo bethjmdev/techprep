@@ -37,7 +37,7 @@
 //-----------//-----------//-----------//-----------//-----------//-----------
 
 
-
+// @ts-ignore
 /**
  * @param {string} licensePlate
  * @param {string[]} words
@@ -49,6 +49,8 @@ const plate = {};
 let wordSalad = {};
 
 let completing = "";
+let lengthCount = 0;
+let isValid = true;
 
 for (let i = 0; i < licensePlate.length; i++) {
     licensePlate = licensePlate.toLowerCase().replace(/[^a-z]/g, "")
@@ -83,74 +85,57 @@ for (let i = 0; i < licensePlate.length; i++) {
         //if it is the closest to it update placeholder
         //do all of the letters in plate map fit into to wordSalad map?
 
-
+        let isValid = true;
         for (let letter of Object.keys(plate)) {
-            console.log("#############")
-            console.log(salad)
-            console.log("letter", letter)
-            console.log("letter salad", wordSalad[letter])
-            console.log("letter plate", plate[letter])
-            console.log("#############")
             // @ts-nocheck
+           
 
-            if(wordSalad[letter] >= plate[letter]) {
-                continue;
-            } else {
-                break;
-            }
-
-           if (completing.length > salad.length) {
-              completing = salad
-              console.log(">>>>>",completing)
-            } if (completing.length === salad.length) {
-             console.log("====",completing)
-             return completing
-            }
+            if (!wordSalad[letter] || wordSalad[letter] < plate[letter]) {
+                isValid = false;
+            }  
 
         }
 
+        if (isValid === true) {
+            if (completing === "" ||salad.length < completing.length) {
+                completing = salad
+            }  
+        }
+      
+
+        lengthCount = 0
+
+        wordSalad = {};
         console.log("_________________________")
 
 
-//         if (completing.length > salad.length) {
-//             completing = salad
-//             console.log(">>>>>",completing)
-//          } if (completing.length === salad.length) {
-//              console.log("====",completing)
-//              return completing
-//          }
     
-
-
-
-        // console.log("wordSalad PRE", wordSalad)
-        // console.log("______")
-        wordSalad = {}
-        // console.log("wordSalad POST", wordSalad)
     }
 
-// console.log(plate) 
+
+    return completing
+
 
 };
 
 // Example test cases
 const testCases = [
-    {
-        licensePlate: "1s3 PSt",
-        words: ["step","steps","stripe","stepple"],
-        expected: "steps"
-    },
+    // {
+    //     licensePlate: "1s3 PSt",
+    //     words: ["step","steps","stripe","stepple"],
+    //     expected: "steps"
+    // },
     // {
     //     licensePlate: "1s3 456",
     //     words: ["looks","pest","stew","show"],
     //     expected: "pest"
     // },
     // this is also ne where I need to slect hte fist one
-    // {
-    //     licensePlate: "aBc 12c",
-    //     words: ["abccdef","caaacab","cbca"],
-    //     expected: "abccdef"
-    // },
+    {
+        licensePlate: "aBc 12c",
+        words: ["abccdef","caaacab","cbca"],
+        expected: "abccdef"
+    },
     // //this is one where i need to select the first one
     // {
     //     licensePlate: "GrE 3",
