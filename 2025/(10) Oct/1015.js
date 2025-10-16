@@ -46,16 +46,16 @@
 var shortestCompletingWord = function(licensePlate, words) {
   
 const plate = {};
-let wordSalad = {};
+
 
 let completing = "";
-let lengthCount = 0;
-let isValid = true;
+
 
 for (let i = 0; i < licensePlate.length; i++) {
     licensePlate = licensePlate.toLowerCase().replace(/[^a-z]/g, "")
 
     let val = licensePlate[i]
+    
     if (plate[val] === undefined){
         plate[val] = 1
     } else {
