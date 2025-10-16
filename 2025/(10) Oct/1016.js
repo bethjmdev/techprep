@@ -25,13 +25,12 @@ var isIsomorphic = function(s, t) {
 
             console.log(tExists.has(t[i]))
 
-            if (!tExists.has(t[i])){
-                tExists.add(t[i])
-            } else {
+            if (tExists.has(t[i])){
                 return false
-            }
+            } 
 
             iso[s[i]] = t[i]
+            tExists.add(t[i])
 
             console.log("iso", iso)
 
