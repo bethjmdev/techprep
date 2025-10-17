@@ -33,10 +33,15 @@ const menu: Pizza[] = [
 
 
 //dosnt change the function not returning something but it tells us or other devs that it's not supposed to return anything
-function addNewPizza(pizzaObj: Pizza): void{
-    pizzaObj["id"] = nextPizzaId++
+function addNewPizza(pizzaObj: Omit<Pizza, "id">): Pizza{
 
-    menu.push(pizzaObj)
+    const newPizza: Pizza = {
+        id: nextPizzaId++,
+        ...pizzaObj
+    }
+
+    menu.push(newPizza)
+    return newPizza
 }
 
 
@@ -58,6 +63,15 @@ function placeOrder(pizzaName: string): Order | undefined{
     return newOrder
 
 }
+
+
+// function addToArray<T>(array:T[], item: T): T[] {
+//     array.push(item)
+//     return array
+// }
+
+// addToArray(menu, {id: nextPizzaId++, name: "Chicken Bacon Ranch", price: 12})
+
 
 
 function completeOrder(orderId: number): Order | undefined {
