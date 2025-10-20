@@ -126,3 +126,111 @@
 
 
 
+
+
+
+/**
+ * @param {string[]} words
+ * @return {number}
+ */
+var uniqueMorseRepresentations = function(words) {
+    
+    const morseCode = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+    const alphabet = [
+        "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+        "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+      ];
+
+    let morseAlphabet = {};
+
+    let newWord = new Set();
+      
+      for (let i = 0; i < alphabet.length; i++) {
+        let letter = alphabet[i]
+        morseAlphabet[letter] = morseCode[i]
+      }
+
+      console.log(morseAlphabet)
+
+
+      for (let i = 0; i < words.length; i++) {
+        let hold = []
+
+        let makeMorse = words[i]
+        for (let j = 0; j < makeMorse.length; j++){
+
+            let letter = makeMorse[j]
+            // console.log(letter)
+
+            hold.push(morseAlphabet[letter])
+
+            console.log("morse ALPHA",morseAlphabet[letter], makeMorse, letter)
+        }
+        
+        hold = hold.join("");
+        console.log("HOLD", hold)
+
+        newWord.add(hold)
+
+        console.log("NEW WORD!!!",newWord)
+
+      }
+
+      console.log("newWord.size",newWord.size)
+
+      return newWord.size
+
+};
+
+
+
+// ------------------ TEST SETUP ------------------
+
+function runTest(words, expected) {
+    const result = uniqueMorseRepresentations(words);
+    console.log("Words:", words);
+    console.log("Result:", result);
+    console.log("Expected:", expected);
+    console.log(result === expected ? "✅ PASS" : "❌ FAIL");
+    console.log("--------------");
+}
+
+
+// ------------------ TEST CASES ------------------
+
+runTest(
+    ["gin","zen","gig","msg"],
+    2
+);
+
+runTest(
+    ["a"],
+    1
+);
+
+runTest(
+    ["no","on","nn","oo"],
+    3
+);
+
+runTest(
+    ["abc","def","ghi"],
+    3
+);
+
+runTest(
+    ["aa","a","aaa","aaaa"],
+    1
+);
+
+runTest(
+    ["hi","hi","hi"],
+    1
+);
+
+runTest(
+    ["sos","pop","mop","sos","sos"],
+    3
+);
+
+
